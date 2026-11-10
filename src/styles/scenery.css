@@ -23,21 +23,22 @@
 /* Dark (default): portal dark tokens. */
 :root,
 :root[data-theme='dark'] {
-	--sl-color-black: #000000;
-	--sl-color-gray-6: #0a0a0a; /* sidebar-bg */
-	--sl-color-gray-5: #222222; /* border */
-	--sl-color-gray-4: #777777; /* text-faint */
+	--sl-color-black: #17181c;
+	--sl-color-gray-6: #1d1e23; /* sidebar-bg */
+	--sl-color-gray-5: #2e3036; /* border */
+	--sl-color-gray-4: #8a8a8a; /* text-faint */
 	--sl-color-gray-3: #aaaaaa; /* text-muted */
 	--sl-color-gray-2: #d4d4d4;
 	--sl-color-gray-1: #eeeeee;
 	--sl-color-white: #fafafa; /* text */
-	--sl-color-bg: #000000;
-	--sl-color-bg-nav: #0a0a0a;
-	--sl-color-bg-sidebar: #0a0a0a;
-	--sl-color-bg-inline-code: #111111; /* card-bg */
-	--sl-color-hairline: #222222;
-	--sl-color-hairline-light: #222222;
-	--sl-color-hairline-shade: #222222;
+	--sl-color-bg: #17181c;
+	--sl-color-bg-nav: #1d1e23;
+	--sl-color-bg-sidebar: #1d1e23;
+	--sl-color-bg-inline-code: #23252b; /* card-bg */
+	--sl-color-text-invert: #17181c; /* text on accent-high fills (active sidebar item) */
+	--sl-color-hairline: #2e3036;
+	--sl-color-hairline-light: #2e3036;
+	--sl-color-hairline-shade: #2e3036;
 	--sl-color-accent-low: rgba(0, 112, 243, 0.12);
 	--sl-color-accent: #0070f3;
 	--sl-color-accent-high: #6cb2ff;
