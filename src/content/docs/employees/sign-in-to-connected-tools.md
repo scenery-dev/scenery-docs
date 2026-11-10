@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Some tools connect to services such as Jira or Slack. Scenery signs you in once, so you never handle the service's password or keys yourself. Your sign-in follows you, so a second laptop does not ask you again. See [Brokered sign-in to tools](/concepts/brokered-sign-in/).
+Some tools connect to services such as Jira or Slack. For tools that use a service sign-in, you sign in once through Scenery and never give the tool your password. Your sign-in follows you, so a second laptop does not ask you again. See [Brokered sign-in to tools](/concepts/brokered-sign-in/).
 
 ## Connect a tool with a service sign-in
 
@@ -40,7 +40,7 @@ A few tools run only on your laptop and show **Self-managed credential**. Those 
 Sign-ins can lapse, for example after a password change at the service. You will see:
 
 - **Needs to be reconnected** with a **Connect** button under **Needs your attention** on your home page.
-- **Connection expired** with a **Reconnect** button on the tool. On some tools the button reads **Re-authorize** instead.
+- **Connection expired** with a **Reconnect** button on the tool. On an installed tool you can also choose **Re-authorize** at any time to sign in again.
 
 Choose the button and sign in again. Nothing else changes: the tool stays installed.
 

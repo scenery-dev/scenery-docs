@@ -36,7 +36,7 @@ The steps below use Claude Code. The other clients follow the same first two ste
 
 3. Restart Claude Code.
 
-   Expected: Scenery is listed as a connected MCP server when you open `/mcp`.
+   Expected: Scenery is listed when you open `/mcp`.
 
 4. If Claude Code asks you to sign in, open `/mcp`, choose **scenery**, then choose **Authenticate**.
 

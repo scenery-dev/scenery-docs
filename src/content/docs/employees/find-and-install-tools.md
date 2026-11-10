@@ -41,10 +41,10 @@ Some tools need a sign-in first. Their button reads **Connect & Install**, **Con
 |---|---|
 | **Blocked by IT** | Your IT team does not allow this tool. Ask them if you need it. |
 | **Pending review** | A tool you submitted is waiting for IT approval. See [Request a tool](/employees/request-a-tool/). |
-| **Waiting on this device** | Your laptop needs a newer Scenery. Run `brew upgrade scenery` and the install finishes. |
+| **Waiting on this device** | Your laptop needs a newer Scenery. On a Mac run `brew upgrade scenery`; on Linux run the install script again. The install then finishes. |
 | **Install failed** | Choose the retry button. If it keeps failing, tell your IT team. |
-| **Install the Scenery agent first** | Your laptop is not set up yet. See [Install](/employees/install/). |
-| **Managed by a plugin** | The tool came with a plugin. Manage it from the plugin's page. |
+| **Install** is greyed out (hover: Install the Scenery agent first) | Your laptop is not set up yet. See [Install](/employees/install/). |
+| **Managed by** *plugin name* | The tool came with a plugin. Manage it from the plugin's page. |
 
 ## Update a tool
 
