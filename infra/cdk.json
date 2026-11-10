@@ -1,0 +1,4 @@
+{
+  "app": "npx tsx bin/docs.ts",
+  "watch": { "include": ["**"], "exclude": ["node_modules", "cdk.out", "test"] }
+}

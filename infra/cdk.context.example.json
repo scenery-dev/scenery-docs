@@ -1,0 +1,7 @@
+{
+  "accountId": "111111111111",
+  "hostedZoneId": "Z0000000000000000000",
+  "hostedZoneName": "scenery.dev",
+  "domainName": "docs.scenery.dev",
+  "createOidcProvider": false
+}
