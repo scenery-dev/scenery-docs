@@ -14,7 +14,8 @@ export interface DocsStackProps extends StackProps {
   zoneId: string;
   zoneName: string;
   domainName: string;
-  githubRepo: string;
+  /** Exact OIDC `sub` the deploy role trusts (GitHub immutable format; see infra/README.md). */
+  githubOidcSubject: string;
   /** true: create the GitHub OIDC provider. false (default): import the existing one by ARN. */
   createOidcProvider: boolean;
 }
@@ -95,7 +96,7 @@ export class DocsStack extends Stack {
       assumedBy: new iam.WebIdentityPrincipal(provider.oidcProviderArn, {
         StringEquals: {
           [`${providerHost}:aud`]: 'sts.amazonaws.com',
-          [`${providerHost}:sub`]: `repo:${props.githubRepo}:ref:refs/heads/main`,
+          [`${providerHost}:sub`]: props.githubOidcSubject,
         },
       }),
     });

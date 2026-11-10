@@ -18,7 +18,9 @@ new DocsStack(app, 'SceneryDocs', {
   zoneId: need('hostedZoneId'),
   zoneName: app.node.tryGetContext('hostedZoneName') ?? 'scenery.dev',
   domainName: app.node.tryGetContext('domainName') ?? 'docs.scenery.dev',
-  githubRepo: app.node.tryGetContext('githubRepo') ?? 'scenery-dev/scenery-docs',
+  githubOidcSubject:
+    app.node.tryGetContext('githubOidcSubject') ??
+    'repo:scenery-dev@349575992/scenery-docs@1452127150:ref:refs/heads/main',
   createOidcProvider: String(app.node.tryGetContext('createOidcProvider')) === 'true',
   description: 'Hosting for the Scenery documentation site (S3, CloudFront, ACM, Route 53)',
 });
