@@ -11,7 +11,7 @@ Many tools connect to third-party services that need a sign-in. With brokered si
 
 ## Why it exists
 
-- Employees never hold the credentials for the services they connect.
+- For services connected through Scenery's sign-in, employees never hold the credentials. Some tools use the employee's own API key instead. See [Sign in to connected tools](/employees/sign-in-to-connected-tools/).
 - Admins can cut off access from one place, instead of chasing keys and tokens across laptops.
 - The sign-in follows the person, not the laptop. See [Installs are per device, sign-ins are per user](/concepts/installs-and-sign-ins/).
 
@@ -19,7 +19,7 @@ Scenery does not host MCP servers. It only brokers the connection to the service
 
 ## What an admin sees
 
-Server pages under **MCP Servers** show how a server signs in. Some need a successful connection test before you can approve them. Revoking a user also removes their connections. See [Archive vs. revoke](/concepts/archive-vs-revoke/).
+Server pages under **MCP Servers** show how a server signs in. Some need a successful connection test before you can approve them. Revoking a user also removes their connections. See [Revoke and kill switches](/rollout/revoke-and-kill-switches/) and [Users and organizations](/concepts/users-and-orgs/).
 
 ## What an employee sees
 

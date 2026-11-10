@@ -17,7 +17,7 @@ Claude Code, Claude Desktop, Cursor, Windsurf, VS Code, Gemini CLI, Antigravity 
 - It makes a backup before changing a client's settings.
 - `scenery mcp setup --dry-run` shows what it would do and changes nothing.
 - Setup is safe to run again.
-- `scenery uninstall` removes Scenery's entries and puts back what was there, without overwriting your later edits.
+- `scenery uninstall` removes Scenery's entries and puts back what was there, without overwriting your later edits. It also signs the device out and removes it from your organization.
 
 For the steps, see [Connect your AI client](/employees/connect-your-ai-client/).
 

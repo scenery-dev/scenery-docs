@@ -11,9 +11,9 @@ The runner keeps a laptop in line with what admins decide. When an admin approve
 
 ## Definitions are verified before they run
 
-Tool definitions, plugins, policy and revocations come from your Scenery organization. The runner checks that each one is genuine before acting on it. Something that fails the check is not run.
+Tool definitions, plugins and policy come from your Scenery organization. The runner checks that each one is genuine before acting on it. Something that fails the check is not run.
 
-For employees this means a tool is checked against what your organization approved before it runs. For admins it means the runner acts only on revocations that came from your Scenery organization.
+For employees this means a tool is checked against what your organization approved before it runs. For admins it means a revoked tool comes back only on a verified decision from your organization.
 
 ## Installs on click
 

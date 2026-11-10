@@ -14,7 +14,7 @@ User-facing changes in each release of the Scenery runner. Upgrade with `brew up
 
 ## v2.2.0 (2026-11-09)
 
-- Tool definitions, plugins, policy and revocations are verified before the runner acts on them.
+- Tool definitions, plugins and policy are verified before the runner acts on them. A revoked tool comes back only on a verified decision from your organization.
 - The installer verifies the runner download before installing it.
 - Stronger checks on downloaded tool files.
 - Google Antigravity is governed alongside the other supported AI clients.

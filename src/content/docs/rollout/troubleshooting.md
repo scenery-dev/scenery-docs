@@ -83,7 +83,7 @@ The progress line on the tool's page shows how many devices have removed it. Dev
 
 ## Still stuck
 
-Collect the output of `scenery doctor` from the laptop, the time of the problem, and the person's email address, and contact support through [scenery.dev](https://scenery.dev).
+Collect the output of `scenery doctor` from the laptop, the time of the problem, and the person's email address, and send them to your Scenery account contact.
 
 ## Related
 

@@ -84,7 +84,7 @@ On a Mac, run `brew upgrade scenery` now and then. On Linux, run the install scr
 
 ## Remove Scenery
 
-`scenery uninstall` puts your computer back the way it was. See [Uninstalling restores, not deletes](/concepts/uninstalling/).
+`scenery uninstall` puts your computer back the way it was. It also signs the device out and removes it from your organization. See [Uninstalling restores, not deletes](/concepts/uninstalling/).
 
 ## Next
 

@@ -23,9 +23,9 @@ The runner is open source. See [Under the hood](/under-the-hood/daemon-and-shim/
 
 The control plane is what you use through the portal at app.scenery.dev. It is where you:
 
-- Review and approve tools before anyone can install them.
+- Review and approve tools before they reach the whole organization.
 - Invite users and see their devices.
-- Let employees connect to third-party services without handling the credentials.
+- Let employees connect to third-party services through Scenery's sign-in without handling the credentials.
 - Read the audit trail and cut off access from one place.
 
 ## Why both

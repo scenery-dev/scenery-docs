@@ -21,7 +21,7 @@ The runner does not keep the credentials for connected services through Scenery.
 
 ## Removing it
 
-`scenery uninstall` restores AI client settings. Add `--purge` to also delete the runner's data and its sign-in. See [Uninstalling restores, not deletes](/concepts/uninstalling/).
+`scenery uninstall` restores AI client settings, signs the device out of Scenery, removes it from your organization (recorded in IT's audit log) and deletes its sign-in from the laptop. Add `--purge` to also delete the runner's other local data. See [Uninstalling restores, not deletes](/concepts/uninstalling/).
 
 ## Related
 

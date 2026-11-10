@@ -10,9 +10,9 @@ Scenery splits the work so that each half does what it is best placed to do.
 ## Decided centrally, by your admins
 
 - Which tools are approved, blocked or archived.
-- Who has an account, and which devices are paired.
+- Who has an account, and which devices stay connected. Employees pair their own devices; admins can revoke any of them.
 - Whether a tool, a device or a person has been cut off.
-- How employees sign in to connected services. This is handled for them, so they never hold those credentials.
+- How employees sign in to connected services. For services connected through Scenery's sign-in, this is handled for them, so they never hold those credentials.
 
 These decisions are made once in the portal and apply everywhere. The control plane is the single record of them.
 

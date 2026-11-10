@@ -9,7 +9,7 @@ sidebar:
 
 Employees often install skills and tools on their own before Scenery arrives. The runner finds these. Adopting a tool hands it over to Scenery:
 
-1. The tool is uploaded to the registry and published as a real version.
+1. The tool is uploaded to the registry as a real version. It stays private to the employee until IT approves it.
 2. The employee's original copy is removed.
 3. It is replaced by the managed version, so the employee needs to do nothing further.
 

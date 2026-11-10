@@ -24,7 +24,7 @@ Employees use approved tools in their AI client. They:
 
 - Install the runner and [pair their laptop](/concepts/devices-and-pairing/).
 - Browse the catalog and install tools.
-- Sign in to connected services such as Jira or Slack once, with no credentials to manage. See [Brokered sign-in](/concepts/brokered-sign-in/).
+- Sign in once to services such as Jira or Slack that connect through Scenery's sign-in, with no credentials to manage. Some tools use the employee's own API key instead. See [Brokered sign-in](/concepts/brokered-sign-in/).
 - Ask for tools that are not in the catalog yet.
 
 Start with [Install the runner](/employees/install/).

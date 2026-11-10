@@ -88,7 +88,7 @@ export function renderCli(snap: Snapshot): string {
     "",
     `This reference covers the \`scenery\` command-line tool, version ${snap.version}. The short alias \`scn\` works for every command. Run \`scenery <command> --help\` for the same text on your machine.`,
     "",
-    "Pairing a device starts in the portal: open **My Devices**, choose **Add a new device**, and copy the code it shows. Then run `scenery auth pair <code>`. Parts of the help text below mention a setup screen on the catalog page; that wording is out of date.",
+    "Pairing a device starts in the portal: open **My Devices**, choose **Add a new device**, and copy the code it shows. Then run `scenery auth pair <code>`. Where the help text below mentions a setup screen on the catalog page, use **My Devices** > **Add a new device**.",
     "",
   ];
   for (const g of INCLUDE) {

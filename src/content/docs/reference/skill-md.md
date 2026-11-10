@@ -15,7 +15,7 @@ Only `name`, `description`, `license` and `metadata` are allowed at the top leve
 | --- | --- | --- | --- |
 | `name` | string | yes | Unique skill name. Lowercase letters, digits and hyphens, starting and ending with a letter or digit. Up to 64 characters. |
 | `description` | string | yes | What the skill does, shown in the catalog and to your AI client. 10 to 280 characters. |
-| `license` | string | no | An SPDX license identifier such as `Apache-2.0` or `MIT`. Defaults to `Apache-2.0` if omitted. |
+| `license` | string | no | An SPDX license identifier such as `Apache-2.0` or `MIT`. |
 
 Everything specific to Scenery goes under `metadata.scenery`.
 
@@ -30,7 +30,7 @@ All are optional.
 | `version` | string (semver) | `0.1.0` | The skill's version, for example `1.2.0`. |
 | `publisher` | string | `local` | Who published the skill. Set for you when you publish. |
 | `permissions` | object | all `none` | What the skill says it needs. See below. |
-| `execution` | object | see below | Limits for a run. See below. |
+| `execution` | object | see below | How the skill says it should run. See below. |
 | `model` | object | none | Model preferences. See below. |
 | `schemas` | object | none | `inputs` and `outputs`: JSON Schema documents describing what the skill takes and returns. |
 | `workflow` | list of steps | one prompt step built from the Markdown body | Inline steps. Each step has an `id` and a `type` of `tool`, `llm`, `transform` or `validate`. |
@@ -56,6 +56,8 @@ These declare what access the skill asks for, so reviewers can see it before app
 | `timeout_ms` | integer | `120000` |
 | `memory_mb` | integer | `512` |
 | `sandbox` | `strict`, `relaxed`, `unrestricted` | `strict` |
+
+Like `permissions`, these are declarations the skill makes about how it expects to run, so reviewers can see them before approving. Unknown keys are rejected.
 
 ### `model`
 

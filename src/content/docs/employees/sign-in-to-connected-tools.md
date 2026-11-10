@@ -46,7 +46,7 @@ Choose the button and sign in again. Nothing else changes: the tool stays instal
 
 ## If your access is cut off
 
-If your IT team revokes your access, your connections end everywhere and the tools leave your devices. Contact your IT team. See [Archive vs. revoke](/concepts/archive-vs-revoke/).
+If your IT team revokes your access, your connections end everywhere and the tools leave your devices. Contact your IT team. See [Users and organizations](/concepts/users-and-orgs/).
 
 ## Related
 

@@ -7,7 +7,7 @@ sidebar:
 
 ## What it is
 
-A device is a laptop or workstation running the Scenery runner. **Pairing** connects it to a signed-in user. Every device, new or existing, goes through pairing.
+A device is a laptop or workstation running the Scenery runner. **Pairing** connects it to a signed-in user. Every device, new or existing, is paired, either with a pairing code or by signing in from the device.
 
 ## Why it exists
 

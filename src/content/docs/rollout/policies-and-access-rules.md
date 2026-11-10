@@ -61,9 +61,11 @@ The **Policies** tab on a server's page sets the overall posture for that server
 
    Expected: the policy type shows as selected. **Deny All** blocks every tool on that server.
 
-3. For **Role-Based**, choose **+ Add Rule**. Enter a tool pattern such as `create_*`, a role (`*` means all), an action of **Allow** or **Deny**, and a priority. Save the rule.
+3. For **Role-Based**, choose **+ Add Rule**. Enter a tool pattern such as `create_*`, a role, an action of **Allow** or **Deny**, and a priority. Save the rule.
 
    Expected: the rule appears in the **Tool Rules** table. When rules overlap, the highest priority wins.
+
+   Use `*` as the role to apply a rule to everyone. Rule roles are separate from the **member** and **admin** account roles you pick when inviting someone.
 
 Use **Delete** on a rule, or **Delete Policy**, to remove it.
 
