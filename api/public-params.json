@@ -1,0 +1,3 @@
+{
+  "GET /admin/users/activity sort": ["email", "created", "last_login", "login_count", "device_count"]
+}

@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && tsx scripts/emit-md.ts",
+    "build": "tsx scripts/gen-api-ref.ts && astro build && tsx scripts/emit-md.ts",
     "preview": "astro preview",
     "astro": "astro",
     "guard": "tsx scripts/content-guard.ts",

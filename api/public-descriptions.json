@@ -1,0 +1,186 @@
+{
+  "GET /skills/search": [
+    "Search skills",
+    "Search the skill catalog. Pass the query as the `q` parameter."
+  ],
+  "GET /skills/{skill_id}/versions/{version}": [
+    "Get skill version metadata",
+    "Returns download location, SHA-256 checksum and size for a published skill version."
+  ],
+  "POST /skills/status": [
+    "Check skill status",
+    "Takes a list of skill IDs and reports whether each is published, unpublished or unknown."
+  ],
+  "GET /portal/skills": [
+    "Browse skills",
+    "Lists published skills, plus your own submissions that are still pending review."
+  ],
+  "GET /portal/skills/{skill_id}": [
+    "Get skill details",
+    "Returns a skill and its published versions. Full detail requires a signed-in user."
+  ],
+  "POST /portal/skills/compile": [
+    "Validate or publish a skill",
+    "Validates a SKILL.md bundle. With `publish=true` it also publishes the bundle as a new version."
+  ],
+  "POST /portal/import/preview": [
+    "Preview an import",
+    "Classifies an external skill or MCP server reference and returns a preview without storing anything."
+  ],
+  "POST /portal/import/submit": [
+    "Submit an import",
+    "Imports a skill, or requests an MCP server, from an external reference."
+  ],
+  "GET /installations/mine": [
+    "List my skill installs",
+    "Lists your skill installations across all of your devices."
+  ],
+  "POST /installations": [
+    "Install a skill",
+    "Requests a skill install on one device, or on all of your devices when `device_id` is omitted."
+  ],
+  "DELETE /installations/{installation_id}": [
+    "Remove a skill install",
+    "Deactivates a skill installation."
+  ],
+  "GET /mcp-installations/mine": [
+    "List my MCP installs",
+    "Lists your MCP server installations."
+  ],
+  "POST /mcp-installations": [
+    "Install an MCP server",
+    "Requests an MCP server install on one device, or on all of your devices."
+  ],
+  "DELETE /mcp-installations/{installation_id}": [
+    "Remove an MCP install",
+    "Deactivates an MCP server installation."
+  ],
+  "GET /plugin-installations/mine": [
+    "List my plugin installs",
+    "Lists your plugin installations."
+  ],
+  "POST /plugin-installations": [
+    "Install a plugin",
+    "Installs a plugin and the skills and MCP servers it contains. Missing parts are reported in the response warnings."
+  ],
+  "DELETE /plugin-installations/{installation_id}": [
+    "Remove a plugin install",
+    "Deactivates a plugin installation and the parts installed with it."
+  ],
+  "GET /admin/users": [
+    "List users",
+    "Lists every user in your organization with device count and active status."
+  ],
+  "GET /admin/users/activity": [
+    "List user activity",
+    "Per-user sign-in and device activity, plus invite history."
+  ],
+  "GET /admin/users/{user_id}/activity": [
+    "Get user activity",
+    "Sign-in and device activity for one user."
+  ],
+  "POST /admin/users/{user_id}/revoke": [
+    "Revoke a user",
+    "Kill switch for one user: blocks their access immediately and removes their installs from every device."
+  ],
+  "POST /admin/users/{user_id}/restore": [
+    "Restore a user",
+    "Re-enables a revoked user. Installs and devices are not restored; the user sets them up again."
+  ],
+  "GET /admin/devices": [
+    "List devices",
+    "Lists all devices in your organization with their owner and install count."
+  ],
+  "GET /admin/devices/stats": [
+    "Get device statistics",
+    "Organization-wide device and installation counts."
+  ],
+  "GET /admin/devices/{device_id}": [
+    "Get device details",
+    "Returns one device with its installations."
+  ],
+  "POST /admin/devices/{device_id}/revoke": [
+    "Revoke a device",
+    "Kill switch for one device: removes its installs and blocks it from syncing."
+  ],
+  "GET /admin/installations": [
+    "List installations",
+    "Organization-wide installation list, filterable by state, skill and user. Paginated."
+  ],
+  "GET /admin/audit-log": [
+    "List audit log",
+    "Lists admin audit log entries, with filters."
+  ],
+  "GET /admin/audit-log/export": [
+    "Export audit log",
+    "Exports the admin audit log as CSV."
+  ],
+  "GET /admin/mcp/audit": [
+    "List MCP audit log",
+    "Lists MCP governance audit entries, with filters."
+  ],
+  "GET /admin/runner-audit": [
+    "List device audit events",
+    "Lists audit events reported by Scenery on employee devices, newest first."
+  ],
+  "GET /admin/skills": [
+    "List skills",
+    "Paginated list of skills with optional filters."
+  ],
+  "GET /admin/skills/{skill_id}": [
+    "Get skill",
+    "Returns one skill with its publisher and versions."
+  ],
+  "GET /admin/skills/{skill_id}/versions": [
+    "List skill versions",
+    "Lists all versions of a skill, newest first."
+  ],
+  "POST /admin/skills/{skill_id}/archive": [
+    "Archive a skill",
+    "Marks a skill inactive. Existing installs are kept."
+  ],
+  "POST /admin/skills/{skill_id}/unarchive": [
+    "Unarchive a skill",
+    "Makes an archived skill active again."
+  ],
+  "POST /admin/skills/{skill_id}/revoke": [
+    "Revoke a skill",
+    "Kill switch: removes the skill from every device that has it."
+  ],
+  "POST /admin/skills/{skill_id}/unrevoke": [
+    "Lift a skill revocation",
+    "Clears the revocation. Devices that already removed the skill do not get it back; users reinstall."
+  ],
+  "GET /admin/mcp/servers": [
+    "List MCP servers",
+    "Lists the MCP servers in your organization's catalog."
+  ],
+  "GET /admin/mcp/servers/{server_id}": [
+    "Get MCP server",
+    "Returns one MCP server catalog entry."
+  ],
+  "POST /admin/mcp/servers/{server_id}/revoke": [
+    "Revoke an MCP server",
+    "Kill switch: removes the server from every device that has it."
+  ],
+  "POST /admin/mcp/servers/{server_id}/unrevoke": [
+    "Lift an MCP server revocation",
+    "Clears the revocation. Users reinstall the server."
+  ],
+  "GET /admin/plugins": [
+    "List plugins",
+    "Lists the plugins in your organization's catalog."
+  ],
+  "GET /admin/plugins/{slug}": [
+    "Get plugin",
+    "Returns one plugin."
+  ],
+  "POST /admin/plugins/{slug}/revoke": [
+    "Revoke a plugin",
+    "Kill switch: removes the plugin from every device that has it."
+  ],
+  "POST /admin/plugins/{slug}/unrevoke": [
+    "Lift a plugin revocation",
+    "Clears the revocation. Users reinstall the plugin."
+  ]
+}

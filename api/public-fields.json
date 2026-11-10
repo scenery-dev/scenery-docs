@@ -1,0 +1,525 @@
+{
+ "ActivityDevice": [
+  "id",
+  "hostname",
+  "display_name",
+  "platform",
+  "arch",
+  "runner_version",
+  "status",
+  "registered_at",
+  "revoked_at"
+ ],
+ "ActivityInvite": [
+  "id",
+  "email",
+  "type",
+  "role",
+  "status",
+  "invited_by_email",
+  "invited_by_label",
+  "created_at",
+  "expires_at",
+  "accepted_at"
+ ],
+ "ActivityInviteCounts": [
+  "sent",
+  "pending",
+  "accepted",
+  "expired",
+  "revoked"
+ ],
+ "ActivityLoginEvent": [
+  "id",
+  "method",
+  "success",
+  "created_at"
+ ],
+ "AdminDeviceDetail": [
+  "id",
+  "hostname",
+  "platform",
+  "arch",
+  "agent_version",
+  "display_name",
+  "status",
+  "registered_at",
+  "revoked_at",
+  "deprovisioned_at",
+  "user",
+  "installations",
+  "mcp_installations"
+ ],
+ "AdminDeviceListResponse": [
+  "devices"
+ ],
+ "AdminDeviceResponse": [
+  "id",
+  "hostname",
+  "platform",
+  "arch",
+  "agent_version",
+  "display_name",
+  "status",
+  "registered_at",
+  "revoked_at",
+  "deprovisioned_at",
+  "installation_count",
+  "user"
+ ],
+ "AdminDeviceRevokeResponse": [
+  "id",
+  "revoked_at",
+  "skills_deactivated",
+  "mcp_deactivated",
+  "plugins_deactivated"
+ ],
+ "AdminDeviceStatsResponse": [
+  "devices_total",
+  "devices_active",
+  "devices_offline",
+  "devices_stale",
+  "installs_total",
+  "installs_pending",
+  "installs_error",
+  "skills_in_use"
+ ],
+ "AdminDeviceUserInfo": [
+  "id",
+  "email",
+  "display_name"
+ ],
+ "AdminInstallationListItem": [
+  "id",
+  "skill_id",
+  "version",
+  "state",
+  "source",
+  "error_message",
+  "desired_at",
+  "installed_at",
+  "updated_at",
+  "device_id",
+  "device_hostname",
+  "device_display_name",
+  "user_id",
+  "user_email"
+ ],
+ "AdminInstallationListResponse": [
+  "items",
+  "total"
+ ],
+ "AdminInstallationResponse": [
+  "id",
+  "skill_id",
+  "version",
+  "state",
+  "source",
+  "error_message",
+  "desired_at",
+  "installed_at",
+  "updated_at"
+ ],
+ "AdminMcpInstallationResponse": [
+  "id",
+  "mcp_server_id",
+  "mcp_server_name",
+  "state",
+  "source",
+  "error_message",
+  "desired_at",
+  "installed_at",
+  "updated_at"
+ ],
+ "AdminUserListItem": [
+  "id",
+  "email",
+  "display_name",
+  "is_active",
+  "device_count",
+  "created_at",
+  "last_login_at"
+ ],
+ "AdminUserListResponse": [
+  "users"
+ ],
+ "AdminUserRevokeResponse": [
+  "id",
+  "is_active",
+  "devices_disconnected",
+  "skills_deactivated",
+  "mcp_deactivated",
+  "plugins_deactivated",
+  "oauth_credentials_revoked"
+ ],
+ "ArtifactMetadataResponse": [
+  "skill_id",
+  "version",
+  "sha256",
+  "size_bytes"
+ ],
+ "AuditLogEntry": [
+  "id",
+  "server_name",
+  "user_id",
+  "user_email",
+  "event_type",
+  "tool_name",
+  "timestamp"
+ ],
+ "AuditLogListResponse": [
+  "items",
+  "total"
+ ],
+ "ValidateOrPublishASkillRequest": [
+  "file",
+  "publish",
+  "duplicate_resolution"
+ ],
+ "BundleFile": [
+  "path",
+  "size_bytes",
+  "sha256"
+ ],
+ "DeviceListResponse": [
+  "devices"
+ ],
+ "DeviceResponse": [
+  "id",
+  "hostname",
+  "platform",
+  "arch",
+  "agent_version",
+  "display_name",
+  "status",
+  "registered_at",
+  "revoked_at",
+  "deprovisioned_at",
+  "installation_summary"
+ ],
+ "ImportRequest": [
+  "url",
+  "duplicate_resolution"
+ ],
+ "InstallationCreateRequest": [
+  "skill_id",
+  "version",
+  "device_id",
+  "source"
+ ],
+ "InstallationCreateResponse": [
+  "installation_id",
+  "state",
+  "skill_id",
+  "version"
+ ],
+ "InstallationListResponse": [
+  "installations"
+ ],
+ "InstallationResponse": [
+  "installation_id",
+  "device_id",
+  "device_display_name",
+  "skill_id",
+  "version",
+  "latest_version",
+  "state",
+  "source",
+  "error_message",
+  "desired_at",
+  "installed_at",
+  "updated_at"
+ ],
+ "InstallationSummary": [
+  "total",
+  "desired",
+  "installed",
+  "error"
+ ],
+ "McpInstallationCreateRequest": [
+  "mcp_server_id",
+  "device_id",
+  "source"
+ ],
+ "McpInstallationCreateResponse": [
+  "installation_id",
+  "state",
+  "mcp_server_id"
+ ],
+ "McpInstallationListResponse": [
+  "installations"
+ ],
+ "McpInstallationResponse": [
+  "installation_id",
+  "device_id",
+  "device_display_name",
+  "mcp_server_id",
+  "mcp_server_name",
+  "auth_type",
+  "state",
+  "source",
+  "error_message",
+  "desired_at",
+  "installed_at",
+  "updated_at"
+ ],
+ "McpServerListResponse": [
+  "items",
+  "total"
+ ],
+ "McpServerResponse": [
+  "id",
+  "name",
+  "status",
+  "description",
+  "auth_type",
+  "created_at",
+  "updated_at",
+  "submitted_by",
+  "submitter_email",
+  "source",
+  "origin"
+ ],
+ "PluginDetailResponse": [
+  "id",
+  "slug",
+  "name",
+  "publisher_id",
+  "publisher_slug",
+  "publisher_name",
+  "description",
+  "status",
+  "install_count",
+  "category",
+  "tags",
+  "latest_version",
+  "created_at",
+  "updated_at",
+  "version_count",
+  "origin",
+  "versions"
+ ],
+ "PluginInstallChildMcp": [
+  "installation_id",
+  "mcp_server_id",
+  "mcp_server_name",
+  "state"
+ ],
+ "PluginInstallChildSkill": [
+  "installation_id",
+  "skill_id",
+  "version",
+  "state"
+ ],
+ "PluginInstallationCreateRequest": [
+  "plugin_slug",
+  "version",
+  "device_id"
+ ],
+ "PluginInstallationCreateResponse": [
+  "installation_id",
+  "state",
+  "plugin_slug",
+  "version",
+  "skill_children",
+  "mcp_children",
+  "warnings"
+ ],
+ "PluginInstallationListResponse": [
+  "installations"
+ ],
+ "PluginInstallationResponse": [
+  "installation_id",
+  "device_id",
+  "plugin_slug",
+  "plugin_name",
+  "version",
+  "state",
+  "source",
+  "error_message",
+  "desired_at",
+  "installed_at",
+  "updated_at",
+  "skill_children",
+  "mcp_children",
+  "warnings"
+ ],
+ "PluginListResponse": [
+  "items",
+  "total",
+  "page",
+  "page_size"
+ ],
+ "PluginResponse": [
+  "id",
+  "slug",
+  "name",
+  "publisher_id",
+  "publisher_slug",
+  "publisher_name",
+  "description",
+  "status",
+  "install_count",
+  "category",
+  "tags",
+  "latest_version",
+  "created_at",
+  "updated_at",
+  "version_count",
+  "origin"
+ ],
+ "PluginSearchResponse": [
+  "items",
+  "total"
+ ],
+ "PluginVersionBrief": [
+  "id",
+  "version",
+  "channel",
+  "status",
+  "is_published",
+  "sha256",
+  "size_bytes",
+  "created_at"
+ ],
+ "PublisherResponse": [
+  "id",
+  "slug",
+  "display_name",
+  "contact_email",
+  "is_active",
+  "created_at",
+  "updated_at"
+ ],
+ "RevokeResponse": [
+  "revoked",
+  "artifact_type",
+  "version",
+  "affected_devices"
+ ],
+ "SkillDetailWithVersions": [
+  "id",
+  "skill_id",
+  "name",
+  "publisher_id",
+  "publisher_slug",
+  "publisher_name",
+  "description",
+  "license",
+  "source",
+  "install_count",
+  "category",
+  "tags",
+  "created_at",
+  "updated_at",
+  "version_count",
+  "latest_version",
+  "skill_type",
+  "pending_review",
+  "archived_at",
+  "origin",
+  "versions",
+  "body_markdown",
+  "source_url",
+  "bundle_files",
+  "bundle_total_bytes"
+ ],
+ "SkillListResponse": [
+  "items",
+  "total",
+  "page",
+  "page_size"
+ ],
+ "SkillResponse": [
+  "id",
+  "skill_id",
+  "name",
+  "publisher_id",
+  "publisher_slug",
+  "publisher_name",
+  "description",
+  "license",
+  "source",
+  "install_count",
+  "category",
+  "tags",
+  "created_at",
+  "updated_at",
+  "version_count",
+  "latest_version",
+  "skill_type",
+  "pending_review",
+  "archived_at",
+  "origin"
+ ],
+ "SkillStatusEntry": [
+  "status",
+  "latest_version"
+ ],
+ "SkillStatusRequest": [
+  "skill_ids"
+ ],
+ "SkillStatusResponse": [
+  "statuses",
+  "unknown"
+ ],
+ "SkillVersionBrief": [
+  "id",
+  "version",
+  "channel",
+  "is_published",
+  "created_at"
+ ],
+ "UnrevokeRequest": [
+  "version"
+ ],
+ "UnrevokeResponse": [
+  "cleared",
+  "artifact_type",
+  "version"
+ ],
+ "UserActivityDetail": [
+  "user",
+  "invites",
+  "devices"
+ ],
+ "UserActivityItem": [
+  "id",
+  "email",
+  "display_name",
+  "role",
+  "is_active",
+  "created_at",
+  "last_login_at",
+  "login_count_30d",
+  "device_count",
+  "active_device_count",
+  "invite_status",
+  "invited_by_label",
+  "invited_at"
+ ],
+ "UserActivityListResponse": [
+  "items",
+  "total",
+  "page",
+  "page_size",
+  "sort",
+  "order",
+  "invite_counts",
+  "invites"
+ ],
+ "VersionDetailResponse": [
+  "id",
+  "version",
+  "channel",
+  "sha256",
+  "size_bytes",
+  "is_published",
+  "published_at",
+  "created_at"
+ ],
+ "RevokeRequest": [
+  "version",
+  "reason"
+ ]
+}

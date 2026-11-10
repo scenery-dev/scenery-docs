@@ -4,6 +4,8 @@ import { fileURLToPath } from "node:url";
 
 export interface GuardConfig {
   errorPatterns: string[];
+  /** Error patterns matched case-sensitively (e.g. directory names that collide with API paths). */
+  caseSensitivePatterns?: string[];
   ipv4Exclude?: string[];
   warnPatterns: string[];
   allowHosts: string[];
@@ -29,7 +31,10 @@ export function runGuardDetailed(paths: string[], config: GuardConfig): { hits: 
   const files: string[] = [];
   for (const p of paths) walk(p, files);
   const allow = config.allowHosts.map((h) => new RegExp(`(?<![\\w.-])${esc(h)}(?![\\w-]|\\.[\\w-])`, "gi"));
-  const errors = config.errorPatterns.map((p) => ({ p, re: new RegExp(p, "gi") }));
+  const errors = [
+    ...config.errorPatterns.map((p) => ({ p, re: new RegExp(p, "gi") })),
+    ...(config.caseSensitivePatterns ?? []).map((p) => ({ p, re: new RegExp(p, "g") })),
+  ];
   const priv = (config.privatePatterns ?? []).map((p, i) => {
     try { return { p, n: i + 1, re: new RegExp(p, "i") }; }
     catch { throw new Error(`invalid private pattern #${i + 1}`); }

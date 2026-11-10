@@ -11,10 +11,9 @@ const config: GuardConfig = {
     "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b",
     "\\bi-[0-9a-f]{8,17}\\b",
     "\\.pem\\b",
-    "/home/[a-z]+",
-    "/Users/[a-z]+",
     "[a-z0-9-]+\\.vectorhawk\\.ai",
   ],
+  caseSensitivePatterns: ["/home/[a-z]+", "/Users/[a-z]+"],
   ipv4Exclude: ["127.0.0.1", "0.0.0.0"],
   warnPatterns: ["keychain", "secrets/", "0600", "0700", "minisign", "ed25519", "kid", "trusted_keys", "encrypt", "vault"],
   allowHosts: ["scenery.dev", "app.scenery.dev", "install.scenery.dev", "docs.scenery.dev"],
@@ -32,6 +31,11 @@ function hitsFor(text: string) {
 }
 
 describe("content guard", () => {
+  it("matches home-directory patterns case-sensitively", () => {
+    expect(hitsFor("GET /admin/users/x\n")).toEqual([]);
+    expect(hitsFor("GET /admin/users/x\n/home/bob\n").map((h) => h.line)).toEqual([2]);
+    expect(hitsFor("/Users/bob\n")).toHaveLength(1);
+  });
   it("flags internal hostnames", () => {
     const h = hitsFor("see staging.example-internal.test\nand internalbox\n");
     expect(h.filter((x) => x.level === "error")).toHaveLength(2);
