@@ -10,7 +10,7 @@ export interface GuardConfig {
   /** Error patterns that the host allowlist can never suppress. */
   privatePatterns: string[];
 }
-export interface Hit { file: string; line: number; pattern: string; level: "error" | "warn" }
+export interface Hit { file: string; line: number; pattern: string; level: "error" | "warn"; privateIndex?: number }
 export interface Ignored { file: string; line: number; reason: string }
 
 const TEXT_EXT = new Set([".md", ".mdx", ".json", ".yaml", ".yml", ".txt", ".html", ".astro", ".ts", ".js", ".mjs"]);
@@ -30,7 +30,10 @@ export function runGuardDetailed(paths: string[], config: GuardConfig): { hits: 
   for (const p of paths) walk(p, files);
   const allow = config.allowHosts.map((h) => new RegExp(`(?<![\\w.-])${esc(h)}(?![\\w-]|\\.[\\w-])`, "gi"));
   const errors = config.errorPatterns.map((p) => ({ p, re: new RegExp(p, "gi") }));
-  const priv = (config.privatePatterns ?? []).map((p) => ({ p, re: new RegExp(p, "i") }));
+  const priv = (config.privatePatterns ?? []).map((p, i) => {
+    try { return { p, n: i + 1, re: new RegExp(p, "i") }; }
+    catch { throw new Error(`invalid private pattern #${i + 1}`); }
+  });
   const isW = (c: string) => /[A-Za-z0-9_]/.test(c);
   const warns = config.warnPatterns.map((p) => ({
     p,
@@ -46,7 +49,7 @@ export function runGuardDetailed(paths: string[], config: GuardConfig): { hits: 
       if (ig) { ignored.push({ file, line, reason: ig[1] }); return; }
       let stripped = text;
       for (const a of allow) stripped = stripped.replace(a, " ");
-      for (const { p, re } of priv) if (re.test(text)) hits.push({ file, line, pattern: p, level: "error" });
+      for (const { p, n, re } of priv) if (re.test(text)) hits.push({ file, line, pattern: p, level: "error", privateIndex: n });
       for (const { p, re } of errors) {
         const m = [...stripped.matchAll(re)].filter((x) => !excl.has(x[0]));
         if (m.length) hits.push({ file, line, pattern: p, level: "error" });
@@ -70,11 +73,19 @@ export function loadConfig(): GuardConfig {
   if (env) extra.push(...env.split("\n"));
   const pf = join(here, "content-guard.private.json");
   if (existsSync(pf)) {
-    const j = JSON.parse(readFileSync(pf, "utf8"));
+    let j: any;
+    try { j = JSON.parse(readFileSync(pf, "utf8")); }
+    catch { throw new Error("invalid private pattern file"); }
     extra.push(...(Array.isArray(j) ? j : j.privatePatterns ?? []));
   }
   config.privatePatterns = [...(config.privatePatterns ?? []), ...extra.map((s) => s.trim()).filter(Boolean)];
   return config;
+}
+
+/** Format a hit for logs. Never reveals the source of a private pattern. */
+export function formatHit(h: Hit, rel: (f: string) => string = (f) => f): string {
+  const label = h.privateIndex !== undefined ? `private pattern #${h.privateIndex}` : h.pattern;
+  return `${h.level.toUpperCase()} ${rel(h.file)}:${h.line} ${label}`;
 }
 
 function main() {
@@ -89,10 +100,10 @@ function main() {
   const H = hits.filter((h) => keep(h.file));
   const errors = H.filter((h) => h.level === "error");
   const warns = H.filter((h) => h.level === "warn");
-  for (const h of errors) console.error(`ERROR ${rel(h.file)}:${h.line} ${h.pattern}`);
+  for (const h of errors) console.error(formatHit(h, rel));
   if (warns.length) {
     console.log("Owner-review list (mechanism words):");
-    for (const h of warns) console.log(`  WARN ${rel(h.file)}:${h.line} ${h.pattern}`);
+    for (const h of warns) console.log(`  ${formatHit(h, rel)}`);
   }
   for (const i of ignored.filter((x) => keep(x.file))) console.log(`  IGNORED ${rel(i.file)}:${i.line} ${i.reason}`);
   console.log(`guard: ${errors.length} error(s), ${warns.length} warning(s), ${ignored.length} ignored`);

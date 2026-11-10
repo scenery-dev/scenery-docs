@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { runGuard, runGuardDetailed, type GuardConfig } from "./content-guard";
+import { runGuard, runGuardDetailed, formatHit, type GuardConfig } from "./content-guard";
 
 // Fake internal names, injected as "private" patterns. The real ones live
 // only in a gitignored file / env var, never in this repo.
@@ -85,5 +85,23 @@ describe("content guard", () => {
     const h = runGuard([dir], config);
     expect(h).toHaveLength(1);
     expect(h[0]).toMatchObject({ line: 2, level: "error" });
+  });
+  it("formatHit never prints a private pattern", () => {
+    const h = hitsFor("see internalbox").filter((x) => x.level === "error");
+    expect(h).toHaveLength(1);
+    const out = formatHit(h[0]);
+    expect(out).toContain("private pattern #1");
+    expect(out).not.toContain("internalbox");
+  });
+  it("formatHit prints public patterns as before", () => {
+    const h = hitsFor("host 203.0.113.7");
+    expect(formatHit(h[0])).toContain(h[0].pattern);
+  });
+  it("invalid private regex error does not leak the source", () => {
+    const c = { ...config, privatePatterns: ["internalbox(["] };
+    const f = join(dir, "e.md");
+    writeFileSync(f, "x");
+    expect(() => runGuard([f], c)).toThrow("invalid private pattern #1");
+    try { runGuard([f], c); } catch (e) { expect(String(e)).not.toContain("internalbox"); }
   });
 });
