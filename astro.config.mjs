@@ -17,6 +17,7 @@ export default defineConfig({
 			customCss: ['./src/styles/scenery.css'],
 			components: {
 				ThemeProvider: './src/components/ThemeProvider.astro',
+				ThemeSelect: './src/components/ThemeSelect.astro',
 				SocialIcons: './src/components/SocialIcons.astro',
 			},
 			social: [

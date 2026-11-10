@@ -2,16 +2,28 @@
 import { Icon } from '@astrojs/starlight/components';
 ---
 
-{/* This is intentionally inlined to avoid FOUC. */}
+{/*
+  Dark is the default. The stored preference is "dark", "light" or "auto"
+  ("auto" follows the operating system). Anything else, including no stored
+  value, means dark. Inlined to avoid a flash of the wrong theme.
+*/}
 <script is:inline>
 	window.StarlightThemeProvider = (() => {
-		const storedTheme =
-			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
-		const theme =
-			storedTheme || 'dark';
-		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		let raw = null;
+		try {
+			raw = typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		} catch {}
+		const storedTheme = raw === 'light' || raw === 'auto' ? raw : 'dark';
+		const resolve = (t) =>
+			t === 'auto'
+				? window.matchMedia('(prefers-color-scheme: light)').matches
+					? 'light'
+					: 'dark'
+				: t;
+		document.documentElement.dataset.theme = resolve(storedTheme);
 		return {
-			updatePickers(theme = storedTheme || 'dark') {
+			resolve,
+			updatePickers(theme = storedTheme) {
 				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
 					const select = picker.querySelector('select');
 					if (select) select.value = theme;
