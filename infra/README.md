@@ -32,3 +32,16 @@ Outputs `BucketName` and `DistributionId` (and `DeployRoleArn`) feed the deploy 
 - Upload `.txt` as `text/plain; charset=utf-8`. Hashed `_astro/*` can be `immutable`; HTML `no-cache`.
 - Invalidate `/*` after sync.
 - The rewrite function maps `/path/` and `/path` to `/path/index.html`; URIs with an extension pass through.
+
+## GitHub Actions configuration
+
+`.github/workflows/deploy.yml` builds, guards and tests on every push and pull request, and deploys on push to `main` only. Set these in the repo settings (values below are placeholders; never commit real ones):
+
+| name | kind | value |
+|------|------|-------|
+| `AWS_DEPLOY_ROLE_ARN` | variable | `DeployRoleArn` stack output, e.g. `arn:aws:iam::<account>:role/<name>` |
+| `DOCS_BUCKET` | variable | `BucketName` stack output |
+| `DOCS_DISTRIBUTION_ID` | variable | `DistributionId` stack output |
+| `GUARD_PRIVATE_PATTERNS` | secret | newline-separated regexes; the job fails on `main` if empty |
+
+Region is us-east-1. Upload runs three `s3 sync` passes (general, `.md`, `llms*.txt`) so content types are explicit; each pass uses `--delete` scoped to its own file class.

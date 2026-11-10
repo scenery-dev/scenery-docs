@@ -1,0 +1,92 @@
+name: docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Content guard
+        env:
+          GUARD_PRIVATE_PATTERNS: ${{ secrets.GUARD_PRIVATE_PATTERNS }}
+        run: |
+          # On main the private patterns must be present, so a missing secret
+          # cannot silently weaken the guard. PRs from forks have no secrets.
+          if [ "$GITHUB_EVENT_NAME" = "push" ] && [ -z "$GUARD_PRIVATE_PATTERNS" ]; then
+            echo "::error::GUARD_PRIVATE_PATTERNS secret is empty; refusing to run a weakened guard on main"
+            exit 1
+          fi
+          npm run guard
+      - run: npm test
+      - name: Infra tests
+        working-directory: infra
+        run: |
+          npm ci
+          npm test
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: github.event_name == 'push'
+        with:
+          name: dist
+          path: dist
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    # Serialize deploys so two syncs never overlap.
+    concurrency:
+      group: docs-deploy
+      cancel-in-progress: false
+    permissions:
+      id-token: write
+      contents: read
+    env:
+      BUCKET: ${{ vars.DOCS_BUCKET }}
+      DISTRIBUTION_ID: ${{ vars.DOCS_DISTRIBUTION_ID }}
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: dist
+          path: dist
+      - uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+      - name: Sync to S3
+        run: |
+          # S3 sync guesses content types badly for .md and .txt, so upload
+          # those classes in their own passes with explicit types.
+          # Pass 1: everything except .md and llms*.txt. --delete only considers
+          # files that pass the filters, so it cannot remove the objects
+          # managed by passes 2 and 3.
+          aws s3 sync dist/ "s3://$BUCKET" --delete \
+            --exclude "*.md" --exclude "llms*.txt"
+          # Pass 2: markdown. --delete here is limited to .md objects, so stale
+          # .md pages are removed without touching anything else.
+          aws s3 sync dist/ "s3://$BUCKET" --delete \
+            --exclude "*" --include "*.md" \
+            --content-type "text/markdown; charset=utf-8"
+          # Pass 3: llms*.txt.
+          aws s3 sync dist/ "s3://$BUCKET" --delete \
+            --exclude "*" --include "llms*.txt" \
+            --content-type "text/plain; charset=utf-8"
+      - name: Invalidate CloudFront
+        run: aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths '/*'
