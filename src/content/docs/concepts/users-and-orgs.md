@@ -21,7 +21,6 @@ Scenery is invite-only. Nobody joins your organization without an admin inviting
 
 - **Invites** lets you invite someone as **member** or **admin**, and revoke a pending invite.
 - **Users** lists everyone with their status. **Revoke** cuts a user off, which also revokes their devices and their connections to services. **Restore** re-enables login. Only an admin can reinstate a user.
-- **Groups** is available for grouping users.
 
 ## Related
 
