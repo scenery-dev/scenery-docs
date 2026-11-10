@@ -4,7 +4,7 @@ Source for [docs.scenery.dev](https://docs.scenery.dev), the documentation for S
 
 ## Develop
 
-Requires Node 20 or newer.
+Requires Node 22.23.4 or newer.
 
 ```bash
 npm install
@@ -25,4 +25,4 @@ See [SECURITY.md](SECURITY.md).
 
 ## License
 
-Content is licensed under [CC BY 4.0](LICENSE).
+Content (the pages in `src/content/docs/`) is licensed under [CC BY 4.0](LICENSE). Code, including `scripts/` and `infra/`, is licensed under [Apache-2.0](LICENSE-CODE).
