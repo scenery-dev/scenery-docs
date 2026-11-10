@@ -9,8 +9,8 @@ User-facing changes in each release of the Scenery runner. Upgrade with `brew up
 
 ## v2.2.1 (2026-11-09)
 
-- Installing a tool no longer asks the employee to approve it in a terminal. Tools install on click.
-- Tool definitions are verified before they run.
+- Installing a tool no longer asks the employee to approve it in a terminal.
+- Local MCP servers install on click once their definition is verified.
 
 ## v2.2.0 (2026-11-09)
 

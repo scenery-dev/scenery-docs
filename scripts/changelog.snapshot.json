@@ -5,8 +5,8 @@
       "tag": "v2.2.1",
       "date": "2026-11-09",
       "items": [
-        "Installing a tool no longer asks the employee to approve it in a terminal. Tools install on click.",
-        "Tool definitions are verified before they run."
+        "Installing a tool no longer asks the employee to approve it in a terminal.",
+        "Local MCP servers install on click once their definition is verified."
       ]
     },
     {

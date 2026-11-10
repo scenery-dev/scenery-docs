@@ -11,6 +11,8 @@
  *   hold internal detail (hosts, milestone codes, how a bug worked); drop
  *   anything that describes a vulnerability's mechanism. Entries with empty
  *   `items` are not rendered, and the test fails until they are curated.
+ *
+ * Note: v2.1.0 has no GitHub release, so its commits appear under v2.1.1.
  */
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";

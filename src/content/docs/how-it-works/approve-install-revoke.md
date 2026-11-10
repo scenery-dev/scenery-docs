@@ -9,7 +9,7 @@ A tool moves through three steps. Admins control the first and last. Employees t
 
 ## Approve
 
-A builder publishes a tool, or the runner finds one already on a laptop. Nothing reaches the whole organization until an admin approves it. Approval is recorded with who made it and when.
+A builder publishes a tool, or the runner finds one already on a laptop. Nothing reaches employees until an admin approves it. Approval is recorded with who made it and when.
 
 - Employees see only approved tools in the catalog.
 - Every new version is a new decision.
