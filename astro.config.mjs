@@ -1,12 +1,15 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightLlmsTxt from 'starlight-llms-txt';
+import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://docs.scenery.dev',
 	integrations: [
 		starlight({
+			plugins: [starlightLlmsTxt(), starlightLinksValidator()],
 			title: 'Scenery Docs',
 			description: 'Documentation for Scenery, enterprise AI tool governance.',
 			logo: { src: './src/assets/logo.svg', alt: 'Scenery' },
