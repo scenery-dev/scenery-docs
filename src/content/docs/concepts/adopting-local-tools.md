@@ -5,4 +5,28 @@ sidebar:
   order: 4
 ---
 
-This page is a stub. Content is coming soon.
+## What it is
+
+Employees often install skills and tools on their own before Scenery arrives. The runner finds these. Adopting a tool hands it over to Scenery:
+
+1. The tool is uploaded to the registry and published as a real version.
+2. The employee's original copy is removed.
+3. It is replaced by the managed version, so the employee needs to do nothing further.
+
+## Why it exists
+
+A tool that exists only on one laptop is not governed and cannot be shared or revoked. Adopting makes the registry the source of truth, so you can update, review and revoke the tool like any other.
+
+## What an admin sees
+
+- Adopted tools appear in the **Review Queue** under auto-adopted tools pending review.
+- **Shadow AI** and **Managed Paths** in the admin navigation show what is on devices and what is under management.
+
+## What an employee sees
+
+On **Local Discoveries** in the portal, each found tool has an **Adopt as installed** button. Imported tools are listed under **Imported** for each tool type, as either found on their devices or imported as private.
+
+## Related
+
+- [Uninstalling restores, not deletes](/concepts/uninstalling/)
+- [Publishing and approval](/concepts/publishing-and-approval/)

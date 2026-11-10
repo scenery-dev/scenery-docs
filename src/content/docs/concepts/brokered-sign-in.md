@@ -5,4 +5,26 @@ sidebar:
   order: 6
 ---
 
-This page is a stub. Content is coming soon.
+## What it is
+
+Many tools connect to third-party services that need a sign-in. With brokered sign-in, Scenery handles that connection for the employee. The employee approves the connection once with the service, and Scenery keeps it working.
+
+## Why it exists
+
+- Employees never hold the credentials for the services they connect.
+- Admins can cut off access from one place, instead of chasing keys and tokens across laptops.
+- The sign-in follows the person, not the laptop. See [Installs are per device, sign-ins are per user](/concepts/installs-and-sign-ins/).
+
+Scenery does not host MCP servers. It only brokers the connection to the service.
+
+## What an admin sees
+
+Server pages under **MCP Servers** show how a server signs in. Some need a successful connection test before you can approve them. Revoking a user also removes their connections. See [Archive vs. revoke](/concepts/archive-vs-revoke/).
+
+## What an employee sees
+
+On first use of a connected tool, the employee is asked to sign in to the service once. See [Sign in to connected tools](/employees/sign-in-to-connected-tools/).
+
+## Related
+
+- [Skills, MCP servers, plugins and agents](/concepts/tool-types/)
