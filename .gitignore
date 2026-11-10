@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# private content-guard patterns (never commit)
+scripts/content-guard.private.json
