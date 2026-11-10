@@ -57,7 +57,7 @@ Expected: Scenery appears in the client's list of MCP servers. If a client is no
 scenery mcp setup --dry-run
 ```
 
-Expected: Scenery prints the clients it found and what it would add, and changes nothing.
+Expected: Scenery shows the clients it detected and a preview of the entry, and changes nothing.
 
 ## Use a new tool right away
 

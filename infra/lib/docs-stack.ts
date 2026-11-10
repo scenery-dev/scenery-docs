@@ -79,20 +79,20 @@ export class DocsStack extends Stack {
     // GitHub Actions deploy role (OIDC, main branch of the docs repo only).
     const providerHost = 'token.actions.githubusercontent.com';
     const provider = props.createOidcProvider
-      ? new iam.OpenIdConnectProvider(this, 'GithubOidc', {
+      ? new iam.OidcProviderNative(this, 'GithubOidc', {
           url: `https://${providerHost}`,
           clientIds: ['sts.amazonaws.com'],
         })
-      : iam.OpenIdConnectProvider.fromOpenIdConnectProviderArn(
+      : iam.OidcProviderNative.fromOidcProviderArn(
           this,
           'GithubOidc',
-          `arn:aws:iam::${this.account}:oidc-provider/${providerHost}`,
+          `arn:${Stack.of(this).partition}:iam::${this.account}:oidc-provider/${providerHost}`,
         );
 
     const deployRole = new iam.Role(this, 'DeployRole', {
       description: 'GitHub Actions deploy role for the Scenery docs site',
       maxSessionDuration: Duration.hours(1),
-      assumedBy: new iam.WebIdentityPrincipal(provider.openIdConnectProviderArn, {
+      assumedBy: new iam.WebIdentityPrincipal(provider.oidcProviderArn, {
         StringEquals: {
           [`${providerHost}:aud`]: 'sts.amazonaws.com',
           [`${providerHost}:sub`]: `repo:${props.githubRepo}:ref:refs/heads/main`,
