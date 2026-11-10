@@ -1,5 +1,5 @@
 ---
-title: "SKILL.md reference"
+title: "SKILL.md"
 description: "The SKILL.md authoring format."
 sidebar:
   order: 2

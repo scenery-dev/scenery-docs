@@ -1,5 +1,5 @@
 ---
-title: "Devices and pairing"
+title: "Devices"
 description: "How a laptop becomes a managed device."
 sidebar:
   order: 8
@@ -21,6 +21,10 @@ Pairing is how Scenery knows a device belongs to a real, signed-in person. A dev
 
 A new computer can also join with `scenery auth login`, which signs in through the browser.
 
+## Installs belong to the device
+
+An install puts a tool in one device's configuration. Installing a tool on a second device adds it to that device only, and removing it from one device leaves the others alone. An employee with more than one device picks the target device when they install. An admin can remove a tool from a lost laptop without cutting the employee off from their other devices.
+
 ## Revoking a device
 
 Revoking a device is permanent for that device record. There is no restore. The employee brings the machine back by running `scenery auth pair` again, which registers it as a **new device**.
@@ -32,4 +36,4 @@ Revoking a device is permanent for that device record. There is no restore. The 
 ## Related
 
 - [Pair devices](/rollout/pair-devices/)
-- [Installs are per device, sign-ins are per user](/concepts/installs-and-sign-ins/)
+- [Accounts](/concepts/accounts/)

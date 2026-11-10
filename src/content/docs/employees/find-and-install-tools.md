@@ -5,7 +5,7 @@ sidebar:
   order: 3
 ---
 
-The portal catalog lists the tools your IT team has approved. Install one and it shows up in your AI client. For what the tool types mean, see [Skills, MCP servers, plugins and agents](/concepts/tool-types/).
+The portal catalog lists the tools your IT team has approved. Install one and it shows up in your AI client. For what the tool types mean, see [Tool types](/concepts/tool-types/).
 
 ## Before you start
 
@@ -55,7 +55,7 @@ When a newer version is available, it appears under **Needs your attention** on 
 1. Choose **Remove** on the tool.
 2. Confirm.
 
-Expected: the tool disappears from your AI client. With more than one laptop, choose which devices to remove it from. Removing a tool from one laptop leaves your other laptops alone. See [Installs are per device, sign-ins are per user](/concepts/installs-and-sign-ins/).
+Expected: the tool disappears from your AI client. With more than one laptop, choose which devices to remove it from. Removing a tool from one laptop leaves your other laptops alone. See [Devices](/concepts/devices/).
 
 ## Next
 

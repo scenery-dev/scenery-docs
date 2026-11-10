@@ -1,5 +1,5 @@
 ---
-title: "Where decisions are made"
+title: "Control points"
 description: "What is decided on the device and what is decided centrally."
 sidebar:
   order: 3
@@ -31,5 +31,5 @@ These decisions are made once in the portal and apply everywhere. The control pl
 
 ## Related
 
-- [Architecture overview](/how-it-works/architecture/)
-- [Policies and access rules](/rollout/policies-and-access-rules/)
+- [Architecture](/how-it-works/architecture/)
+- [Policies](/rollout/policies/)

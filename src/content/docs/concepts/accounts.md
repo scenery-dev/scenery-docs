@@ -1,5 +1,5 @@
 ---
-title: "Users and organizations"
+title: "Accounts"
 description: "Who can do what in your Scenery organization."
 sidebar:
   order: 9
@@ -13,6 +13,10 @@ An **organization** is your company's space in Scenery. It holds your users, dev
 
 Two roles exist: **member** and **admin**. Members use the catalog and their own devices. Admins also review tools, manage users and devices, and run the kill switches. You choose the role when you send an invite.
 
+## Sign-ins belong to the user
+
+A sign-in is a person's connection to a service such as Jira. It belongs to the user and follows them across all their devices, so an employee with two laptops signs in to Jira once. Cutting off a user ends their sign-ins everywhere. See [Kill switches](/rollout/kill-switches/).
+
 ## Why it works this way
 
 Scenery is invite-only. Nobody joins your organization without an admin inviting them, so the user list is always what you expect.
@@ -25,5 +29,6 @@ Scenery is invite-only. Nobody joins your organization without an admin inviting
 ## Related
 
 - [Invite users](/rollout/invite-users/)
-- [Devices and pairing](/concepts/devices-and-pairing/)
-- [Archive vs. revoke](/concepts/archive-vs-revoke/)
+- [Devices](/concepts/devices/)
+- [Tool sign-in](/concepts/tool-sign-in/)
+- [Archive and revoke](/concepts/archive-and-revoke/)

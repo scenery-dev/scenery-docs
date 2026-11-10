@@ -1,5 +1,5 @@
 ---
-title: "Uninstalling restores, not deletes"
+title: "Uninstalling"
 description: "What happens to a laptop when a tool is removed."
 sidebar:
   order: 10
@@ -23,9 +23,9 @@ It then writes a restore report with three sections:
 - **Kept.** Tools the employee brought themselves stay in place, no longer tracked by Scenery.
 - **Restored.** Anything Scenery took over is put back from backup.
 
-Use `--dry-run` to see the plan without changing anything. See the [CLI reference](/reference/cli/).
+Use `--dry-run` to see the plan without changing anything. See the [CLI](/reference/cli/).
 
 ## Related
 
-- [Adopting tools already on a laptop](/concepts/adopting-local-tools/)
-- [Devices and pairing](/concepts/devices-and-pairing/)
+- [Adoption](/concepts/adoption/)
+- [Devices](/concepts/devices/)

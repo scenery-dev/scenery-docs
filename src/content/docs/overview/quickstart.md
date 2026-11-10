@@ -50,9 +50,9 @@ As an admin, add an MCP server:
 1. Open **MCP Servers** in the admin portal and choose **+ Import**.
 2. Paste the server reference. Any common format works: an `npx` command, a JSON config or a URL.
 3. Choose **Preview**, check the detected details, then choose **Add to Catalog**. Imported servers start as approved.
-4. Open the server and check that its status is **approved**. Later, **Block server** stops new installs, and **Revoke Access** removes it from devices. See [Revoke and kill switches](/rollout/revoke-and-kill-switches/).
+4. Open the server and check that its status is **approved**. Later, **Block server** stops new installs, and **Revoke Access** removes it from devices. See [Kill switches](/rollout/kill-switches/).
 
-Skills that employees publish go to the **Review Queue**, where you choose **Approve (Publish)** or **Approve (Private)**. See [Review and approve tools](/rollout/review-and-approve/) and [Publishing and approval](/concepts/publishing-and-approval/).
+Skills that employees publish go to the **Review Queue**, where you choose **Approve (Publish)** or **Approve (Private)**. See [Approvals](/rollout/approvals/) and [Approval](/concepts/approval/).
 
 ## 5. Employee uses it in Claude Code (5 minutes)
 
@@ -60,10 +60,10 @@ The employee opens **MCP Servers** in the portal, finds the server and chooses *
 
 ## 6. Check your work (5 minutes)
 
-Back in the admin portal, open **Activity Log** to see what happened, and **Devices** to see the laptop's installs. See [Reading audit logs](/rollout/reading-audit-logs/).
+Back in the admin portal, open **Activity Log** to see what happened, and **Devices** to see the laptop's installs. See [Audit logs](/rollout/audit-logs/).
 
 ## What next
 
-- Set up [policies and access rules](/rollout/policies-and-access-rules/).
-- Learn the kill switches in [Revoke and kill switches](/rollout/revoke-and-kill-switches/).
-- Read the [Concepts](/concepts/tool-types/) to understand what you just did.
+- Set up [Policies](/rollout/policies/).
+- Learn the kill switches in [Kill switches](/rollout/kill-switches/).
+- Read the [Tool types](/concepts/tool-types/) to understand what you just did.

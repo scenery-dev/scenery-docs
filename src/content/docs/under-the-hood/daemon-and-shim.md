@@ -24,9 +24,9 @@ A thin relay that an AI client starts when it connects. It passes messages betwe
 
 ## Checking on it
 
-Run `scenery doctor` to see whether the background service is running. See the [CLI reference](/reference/cli/) and [Troubleshooting](/rollout/troubleshooting/).
+Run `scenery doctor` to see whether the background service is running. See the [CLI](/reference/cli/) and [Troubleshooting](/rollout/troubleshooting/).
 
 ## Related
 
-- [Sync and signed definitions](/under-the-hood/sync-and-signed-definitions/)
-- [How AI clients get configured](/under-the-hood/client-configuration/)
+- [Sync and signing](/under-the-hood/sync-and-signing/)
+- [Client setup](/under-the-hood/client-setup/)

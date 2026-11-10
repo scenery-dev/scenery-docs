@@ -1,5 +1,5 @@
 ---
-title: "Archive vs. revoke"
+title: "Archive and revoke"
 description: "Take a skill out of circulation, or switch it off everywhere."
 sidebar:
   order: 7
@@ -21,9 +21,9 @@ On a skill's page under **Skills**:
 - **Archive Skill** asks for confirmation (**Yes, Archive**). **Unarchive Skill** reverses it.
 - **Revoke Access** shows the impact first, then removes the skill. A revoked skill shows a **Revoked** badge in the list. You can unrevoke it later.
 
-Users and devices have their own controls. See [Devices and pairing](/concepts/devices-and-pairing/) and [Users and organizations](/concepts/users-and-orgs/).
+Users and devices have their own controls. See [Devices](/concepts/devices/) and [Accounts](/concepts/accounts/).
 
 ## Related
 
-- [Revoke and kill switches](/rollout/revoke-and-kill-switches/)
-- [Uninstalling restores, not deletes](/concepts/uninstalling/)
+- [Kill switches](/rollout/kill-switches/)
+- [Uninstalling](/concepts/uninstalling/)

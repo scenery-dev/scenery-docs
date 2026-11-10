@@ -1,11 +1,11 @@
 ---
-title: "Reading audit logs"
+title: "Audit logs"
 description: "See what happened and who did it."
 sidebar:
   order: 7
 ---
 
-Scenery records what people and devices do with tools, and what admins change. Everything is in one place, the **Activity Log**. For the idea, see [The audit trail](/how-it-works/audit-trail/).
+Scenery records what people and devices do with tools, and what admins change. Everything is in one place, the **Activity Log**. For the idea, see [Audit trail](/how-it-works/audit-trail/).
 
 ## Open the Activity Log
 
@@ -56,6 +56,6 @@ Choose **Export Gateway CSV**, **Export MCP CSV** or **Export Admin CSV** to dow
 
 ## Related
 
-- [The audit trail](/how-it-works/audit-trail/)
-- [Revoke and kill switches](/rollout/revoke-and-kill-switches/)
-- [Policies and access rules](/rollout/policies-and-access-rules/)
+- [Audit trail](/how-it-works/audit-trail/)
+- [Kill switches](/rollout/kill-switches/)
+- [Policies](/rollout/policies/)

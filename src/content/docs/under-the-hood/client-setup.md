@@ -1,5 +1,5 @@
 ---
-title: "How AI clients get configured"
+title: "Client setup"
 description: "How Claude Code, Cursor and others are connected."
 sidebar:
   order: 4
@@ -24,4 +24,4 @@ For the steps, see [Connect your AI client](/employees/connect-your-ai-client/).
 ## Related
 
 - [Daemon and shim](/under-the-hood/daemon-and-shim/)
-- [Uninstalling restores, not deletes](/concepts/uninstalling/)
+- [Uninstalling](/concepts/uninstalling/)

@@ -1,5 +1,5 @@
 ---
-title: "CLI reference"
+title: "CLI"
 description: "Commands that admins and employees run."
 sidebar:
   order: 1

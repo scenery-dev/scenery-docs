@@ -1,5 +1,5 @@
 ---
-title: "Sync and signed definitions"
+title: "Sync and signing"
 description: "How the runner stays current with your policy."
 sidebar:
   order: 2
@@ -25,5 +25,5 @@ The install script checks that the runner it downloads is the one Scenery publis
 
 ## Related
 
-- [Approve, install, revoke](/how-it-works/approve-install-revoke/)
+- [Lifecycle](/how-it-works/lifecycle/)
 - [Changelog](/reference/changelog/)

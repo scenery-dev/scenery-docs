@@ -35,5 +35,5 @@ The runner gives you coverage on the endpoint. The control plane gives you centr
 ## Where to go next
 
 - New to Scenery? Follow the [Quickstart](/overview/quickstart/).
-- Want the vocabulary first? Read [Skills, MCP servers, plugins and agents](/concepts/tool-types/).
+- Want the vocabulary first? Read [Tool types](/concepts/tool-types/).
 - See [Who uses what](/overview/who-uses-what/) to find the pages for your role.

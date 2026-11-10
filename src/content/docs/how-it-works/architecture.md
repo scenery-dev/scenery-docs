@@ -1,5 +1,5 @@
 ---
-title: "Architecture overview"
+title: "Architecture"
 description: "The runner, the control plane and your AI client."
 sidebar:
   order: 1
@@ -27,6 +27,6 @@ The runner covers the endpoint. The control plane covers the organization. An ad
 
 ## Related
 
-- [Approve, install, revoke](/how-it-works/approve-install-revoke/)
-- [Where decisions are made](/how-it-works/where-decisions-are-made/)
+- [Lifecycle](/how-it-works/lifecycle/)
+- [Control points](/how-it-works/control-points/)
 - [What is Scenery](/overview/what-is-scenery/)

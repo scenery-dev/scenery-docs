@@ -1,5 +1,5 @@
 ---
-title: "HTTP API reference"
+title: "API"
 description: "The public HTTP API for scripting and integrating with Scenery."
 sidebar:
   order: 3

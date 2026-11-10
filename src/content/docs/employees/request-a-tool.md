@@ -37,7 +37,7 @@ You can also write your own with **+ New Skill**. Your own skills stay private t
 - When IT approves it, the tool shows up in the catalog with an **Install** button. See [Find and install tools](/employees/find-and-install-tools/).
 - If it is **Rejected** or **Blocked**, ask your IT team why.
 
-To see what happens on their side, read [Review and approve](/rollout/review-and-approve/).
+To see what happens on their side, read [Approvals](/rollout/approvals/).
 
 ## Next
 

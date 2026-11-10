@@ -1,17 +1,17 @@
 ---
-title: "Review and approve tools"
+title: "Approvals"
 description: "Decide which tools your organization can use."
 sidebar:
   order: 4
 ---
 
-Nothing reaches the whole organization until an admin approves it. This page walks through each place work waits for you. For the idea behind it, see [Publishing and approval](/concepts/publishing-and-approval/).
+Nothing reaches the whole organization until an admin approves it. This page walks through each place work waits for you. For the idea behind it, see [Approval](/concepts/approval/).
 
 ## Start at the Review Queue
 
 1. In the admin portal, open **Review Queue** under **Security**.
 
-   Expected: two lists. **Skill submissions** are skills waiting for content review. **Auto-adopted tools** are skills, plugins and MCP servers that the runner found on employee laptops and adopted, waiting for your approval. Both refresh every 30 seconds. See [Adopting tools already on a laptop](/concepts/adopting-local-tools/).
+   Expected: two lists. **Skill submissions** are skills waiting for content review. **Auto-adopted tools** are skills, plugins and MCP servers that the runner found on employee laptops and adopted, waiting for your approval. Both refresh every 30 seconds. See [Adoption](/concepts/adoption/).
 
 2. For each row, check the kind, name, who submitted it and when.
 
@@ -50,7 +50,7 @@ To decide several adopted tools at once, tick their checkboxes. A bar shows how 
 
    Expected: approved servers move into the catalog.
 
-Access requests for servers that need approval appear on **MCP Servers** under **Pending Access Requests**, each with **Approve** and **Reject**. How many requests need your decision depends on the approval mode you set in [Policies and access rules](/rollout/policies-and-access-rules/).
+Access requests for servers that need approval appear on **MCP Servers** under **Pending Access Requests**, each with **Approve** and **Reject**. How many requests need your decision depends on the approval mode you set in [Policies](/rollout/policies/).
 
 Some servers need a working connection before they can be approved. The portal tells you when that is the case.
 
@@ -62,7 +62,7 @@ Some servers need a working connection before they can be approved. The portal t
 
 2. Choose **Block server** to stop new use, or **Approve server** to allow it again.
 
-   Expected: the status changes. To also remove it from devices that already have it, use **Revoke Access** as described in [Revoke and kill switches](/rollout/revoke-and-kill-switches/).
+   Expected: the status changes. To also remove it from devices that already have it, use **Revoke Access** as described in [Kill switches](/rollout/kill-switches/).
 
 ## Plugins
 
@@ -78,10 +78,10 @@ You can also block or unblock a whole plugin with **Block Plugin** and **Unblock
 
 ## Skills
 
-Skills that need review appear in the Review Queue. Open **Skills** under **Govern** to see every skill with its status. A skill's page shows its versions and has the controls for archiving and revoking. See [Archive vs. revoke](/concepts/archive-vs-revoke/).
+Skills that need review appear in the Review Queue. Open **Skills** under **Govern** to see every skill with its status. A skill's page shows its versions and has the controls for archiving and revoking. See [Archive and revoke](/concepts/archive-and-revoke/).
 
 ## Related
 
-- [Publishing and approval](/concepts/publishing-and-approval/)
-- [Policies and access rules](/rollout/policies-and-access-rules/)
+- [Approval](/concepts/approval/)
+- [Policies](/rollout/policies/)
 - [Request a tool](/employees/request-a-tool/)

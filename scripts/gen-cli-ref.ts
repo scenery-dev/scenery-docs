@@ -80,7 +80,7 @@ export function captureSnapshot(binary: string): Snapshot {
 export function renderCli(snap: Snapshot): string {
   const parts: string[] = [
     "---",
-    'title: "CLI reference"',
+    'title: "CLI"',
     'description: "Commands that admins and employees run."',
     "sidebar:",
     "  order: 1",

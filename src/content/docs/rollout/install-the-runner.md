@@ -72,11 +72,11 @@ The installer's output is the whole experience. Nothing appears in the portal un
 
 ## Remove the runner
 
-`scenery uninstall` puts the computer back the way it was. It also signs the device out and removes it from your organization. See [Uninstalling restores, not deletes](/concepts/uninstalling/).
+`scenery uninstall` puts the computer back the way it was. It also signs the device out and removes it from your organization. See [Uninstalling](/concepts/uninstalling/).
 
 ## Related
 
 - [Employee install guide](/employees/install/)
 - [Pair devices](/rollout/pair-devices/)
-- [CLI reference](/reference/cli/)
+- [CLI](/reference/cli/)
 - [Troubleshooting](/rollout/troubleshooting/)

@@ -89,4 +89,4 @@ Collect the output of `scenery doctor` from the laptop, the time of the problem,
 
 - [Install the runner](/rollout/install-the-runner/)
 - [Pair devices](/rollout/pair-devices/)
-- [CLI reference](/reference/cli/)
+- [CLI](/reference/cli/)

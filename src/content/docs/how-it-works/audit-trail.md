@@ -1,5 +1,5 @@
 ---
-title: "The audit trail"
+title: "Audit trail"
 description: "What an admin can see."
 sidebar:
   order: 4
@@ -22,9 +22,9 @@ Scenery keeps a record of what people and devices do with tools, and of what adm
 
 Activity is reported to the control plane by the runner. A laptop that is offline reports when it reconnects.
 
-For where to click, see [Reading audit logs](/rollout/reading-audit-logs/).
+For where to click, see [Audit logs](/rollout/audit-logs/).
 
 ## Related
 
-- [Approve, install, revoke](/how-it-works/approve-install-revoke/)
-- [Revoke and kill switches](/rollout/revoke-and-kill-switches/)
+- [Lifecycle](/how-it-works/lifecycle/)
+- [Kill switches](/rollout/kill-switches/)

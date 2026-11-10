@@ -1,11 +1,11 @@
 ---
-title: "Policies and access rules"
+title: "Policies"
 description: "Control who can use which tools."
 sidebar:
   order: 5
 ---
 
-This page covers the controls the admin portal gives you today for deciding what employees can use. Approval, blocking and revoking are described in [Review and approve tools](/rollout/review-and-approve/) and [Revoke and kill switches](/rollout/revoke-and-kill-switches/).
+This page covers the controls the admin portal gives you today for deciding what employees can use. Approval, blocking and revoking are described in [Approvals](/rollout/approvals/) and [Kill switches](/rollout/kill-switches/).
 
 ## Set how access requests are handled
 
@@ -77,6 +77,6 @@ Use **Delete** on a rule, or **Delete Policy**, to remove it.
 
 ## Related
 
-- [Publishing and approval](/concepts/publishing-and-approval/)
-- [Review and approve tools](/rollout/review-and-approve/)
-- [Reading audit logs](/rollout/reading-audit-logs/)
+- [Approval](/concepts/approval/)
+- [Approvals](/rollout/approvals/)
+- [Audit logs](/rollout/audit-logs/)

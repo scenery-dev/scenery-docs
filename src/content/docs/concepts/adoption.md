@@ -1,5 +1,5 @@
 ---
-title: "Adopting tools already on a laptop"
+title: "Adoption"
 description: "Bring tools people already use under governance."
 sidebar:
   order: 4
@@ -28,5 +28,5 @@ On **Local Discoveries** in the portal, each found tool has an **Adopt as instal
 
 ## Related
 
-- [Uninstalling restores, not deletes](/concepts/uninstalling/)
-- [Publishing and approval](/concepts/publishing-and-approval/)
+- [Uninstalling](/concepts/uninstalling/)
+- [Approval](/concepts/approval/)

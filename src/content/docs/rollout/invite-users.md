@@ -5,7 +5,7 @@ sidebar:
   order: 2
 ---
 
-Scenery is invite-only. Nobody joins your organization unless an admin invites them. See [Users and organizations](/concepts/users-and-orgs/) for the two roles, **member** and **admin**.
+Scenery is invite-only. Nobody joins your organization unless an admin invites them. See [Accounts](/concepts/accounts/) for the two roles, **member** and **admin**.
 
 ## Send an invite
 
@@ -52,10 +52,10 @@ An invite link works for 7 days. After that it shows as invalid or expired, and 
 
 Open **Users** under **Activity**. Each person is listed with their status, last login, and number of devices. Expand a row to see their recent sign-ins, devices and invites. An invited person appears here once they accept.
 
-To remove someone's access later, see [Revoke and kill switches](/rollout/revoke-and-kill-switches/).
+To remove someone's access later, see [Kill switches](/rollout/kill-switches/).
 
 ## Related
 
-- [Users and organizations](/concepts/users-and-orgs/)
+- [Accounts](/concepts/accounts/)
 - [Pair devices](/rollout/pair-devices/)
 - [Troubleshooting](/rollout/troubleshooting/)

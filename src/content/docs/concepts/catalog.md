@@ -1,5 +1,5 @@
 ---
-title: "The catalog and the registry"
+title: "Catalog"
 description: "Where approved tools live and how people find them."
 sidebar:
   order: 2
@@ -16,7 +16,7 @@ Without a central place, tools spread by copy and paste, and nobody knows which 
 ## What an admin sees
 
 - **Skills**, **MCP Servers** and **Plugins** in the admin navigation list everything in the registry, including tools that are not yet approved.
-- **Skills** shows version history and lets you [archive or revoke](/concepts/archive-vs-revoke/) a skill.
+- **Skills** shows version history and lets you [Archive and revoke](/concepts/archive-and-revoke/) a skill.
 - **MCP Servers** shows each server as approved or blocked.
 
 ## What an employee sees
@@ -25,5 +25,5 @@ The portal's **Browse** pages show approved tools. Tools the employee imported f
 
 ## Related
 
-- [Skills, MCP servers, plugins and agents](/concepts/tool-types/)
-- [Publishing and approval](/concepts/publishing-and-approval/)
+- [Tool types](/concepts/tool-types/)
+- [Approval](/concepts/approval/)

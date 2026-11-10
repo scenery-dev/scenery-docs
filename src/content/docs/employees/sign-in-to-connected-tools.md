@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Some tools connect to services such as Jira or Slack. For tools that use a service sign-in, you sign in once through Scenery and never give the tool your password. Your sign-in follows you, so a second laptop does not ask you again. See [Brokered sign-in to tools](/concepts/brokered-sign-in/).
+Some tools connect to services such as Jira or Slack. For tools that use a service sign-in, you sign in once through Scenery and never give the tool your password. Your sign-in follows you, so a second laptop does not ask you again. See [Tool sign-in](/concepts/tool-sign-in/).
 
 ## Connect a tool with a service sign-in
 
@@ -46,9 +46,9 @@ Choose the button and sign in again. Nothing else changes: the tool stays instal
 
 ## If your access is cut off
 
-If your IT team revokes your access, your connections end everywhere and the tools leave your devices. Contact your IT team. See [Users and organizations](/concepts/users-and-orgs/).
+If your IT team revokes your access, your connections end everywhere and the tools leave your devices. Contact your IT team. See [Accounts](/concepts/accounts/).
 
 ## Related
 
 - [Find and install tools](/employees/find-and-install-tools/)
-- [Installs are per device, sign-ins are per user](/concepts/installs-and-sign-ins/)
+- [Accounts](/concepts/accounts/)

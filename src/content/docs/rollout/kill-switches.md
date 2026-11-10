@@ -1,11 +1,11 @@
 ---
-title: "Revoke and kill switches"
+title: "Kill switches"
 description: "Remove access quickly."
 sidebar:
   order: 6
 ---
 
-Scenery has a kill switch at each level: a tool, a device and a person. Use them when a tool turns out to be a problem, a laptop is lost, or someone leaves. Each one is controlled from the admin portal, so you do not need to touch the laptops. For the thinking behind each, see [Archive vs. revoke](/concepts/archive-vs-revoke/).
+Scenery has a kill switch at each level: a tool, a device and a person. Use them when a tool turns out to be a problem, a laptop is lost, or someone leaves. Each one is controlled from the admin portal, so you do not need to touch the laptops. For the thinking behind each, see [Archive and revoke](/concepts/archive-and-revoke/).
 
 ## Pick the right control
 
@@ -77,11 +77,11 @@ Only an admin can bring a person back. To do that:
 
 ## Tell the employee
 
-Removing a tool does not leave a laptop broken. Anything the employee had before Scenery stays in place. See [Uninstalling restores, not deletes](/concepts/uninstalling/).
+Removing a tool does not leave a laptop broken. Anything the employee had before Scenery stays in place. See [Uninstalling](/concepts/uninstalling/).
 
 ## Related
 
-- [Archive vs. revoke](/concepts/archive-vs-revoke/)
-- [Devices and pairing](/concepts/devices-and-pairing/)
-- [Users and organizations](/concepts/users-and-orgs/)
-- [Reading audit logs](/rollout/reading-audit-logs/)
+- [Archive and revoke](/concepts/archive-and-revoke/)
+- [Devices](/concepts/devices/)
+- [Accounts](/concepts/accounts/)
+- [Audit logs](/rollout/audit-logs/)

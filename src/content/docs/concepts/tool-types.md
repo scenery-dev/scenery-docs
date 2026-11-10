@@ -1,5 +1,5 @@
 ---
-title: "Skills, MCP servers, plugins and agents"
+title: "Tool types"
 description: "What each type of AI tool is."
 sidebar:
   order: 1
@@ -9,11 +9,11 @@ Scenery governs four kinds of AI tool. Each is approved, installed and revoked t
 
 ## Skills
 
-A skill is a set of instructions, and optionally scripts, that teaches an AI client how to do a task, such as reviewing code to your team's standard. A skill is a folder with a `SKILL.md` file. See the [SKILL.md reference](/reference/skill-md/).
+A skill is a set of instructions, and optionally scripts, that teaches an AI client how to do a task, such as reviewing code to your team's standard. A skill is a folder with a `SKILL.md` file. See the [SKILL.md](/reference/skill-md/).
 
 ## MCP servers
 
-An MCP server gives an AI client access to a system, such as Jira, Slack or GitHub. Scenery does not host MCP servers. They run where they already run: at the provider, or on the employee's machine. Scenery governs who may use them and, for services that need sign-in, brokers the connection. See [Brokered sign-in](/concepts/brokered-sign-in/).
+An MCP server gives an AI client access to a system, such as Jira, Slack or GitHub. Scenery does not host MCP servers. They run where they already run: at the provider, or on the employee's machine. Scenery governs who may use them and, for services that need sign-in, brokers the connection. See [Tool sign-in](/concepts/tool-sign-in/).
 
 ## Plugins
 
@@ -30,5 +30,5 @@ Agents are governed alongside skills. They appear with skills in the portal cata
 
 ## Related
 
-- [The catalog and the registry](/concepts/catalog-and-registry/)
-- [Publishing and approval](/concepts/publishing-and-approval/)
+- [Catalog](/concepts/catalog/)
+- [Approval](/concepts/approval/)

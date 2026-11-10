@@ -5,7 +5,7 @@ sidebar:
   order: 3
 ---
 
-Pairing connects an installed runner to a signed-in person. A device that is not paired gets no tools. See [Devices and pairing](/concepts/devices-and-pairing/) for the idea. Each employee pairs their own computer.
+Pairing connects an installed runner to a signed-in person. A device that is not paired gets no tools. See [Devices](/concepts/devices/) for the idea. Each employee pairs their own computer.
 
 ## Before you start
 
@@ -73,10 +73,10 @@ An offline or stale device does not receive new installs or removals until it co
 
 - Employees can rename a device with the pencil icon on **My Devices**.
 - **Remove** on **My Devices** unregisters the device and clears its tool installs. A runner that is still running on that machine registers again by itself.
-- Admins cut off a lost or retired device with **Revoke Device**. See [Revoke and kill switches](/rollout/revoke-and-kill-switches/).
+- Admins cut off a lost or retired device with **Revoke Device**. See [Kill switches](/rollout/kill-switches/).
 
 ## Related
 
-- [Devices and pairing](/concepts/devices-and-pairing/)
+- [Devices](/concepts/devices/)
 - [Install the runner](/rollout/install-the-runner/)
 - [Troubleshooting](/rollout/troubleshooting/)

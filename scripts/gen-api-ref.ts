@@ -56,7 +56,7 @@ export function renderApi(spec: OpenAPIObject): string {
   const base = spec.servers[0].url;
   const out: string[] = [
     "---",
-    'title: "HTTP API reference"',
+    'title: "API"',
     'description: "The public HTTP API for scripting and integrating with Scenery."',
     "sidebar:",
     "  order: 3",

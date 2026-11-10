@@ -1,5 +1,5 @@
 ---
-title: "SKILL.md and the metadata.scenery namespace"
+title: "SKILL.md namespace"
 description: "How Scenery extends the SKILL.md standard."
 sidebar:
   order: 5
@@ -11,8 +11,8 @@ Everything specific to Scenery sits under `metadata.scenery`: version, publisher
 
 Putting extensions in one namespace means other tools can ignore what they do not understand, and Scenery never claims top-level keys the standard may use later. Top-level keys that start with `vh_` are rejected.
 
-For every key, see the [SKILL.md reference](/reference/skill-md/).
+For every key, see the [SKILL.md](/reference/skill-md/).
 
 ## Related
 
-- [Publishing and approval](/concepts/publishing-and-approval/)
+- [Approval](/concepts/approval/)

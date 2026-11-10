@@ -1,5 +1,5 @@
 ---
-title: "Reporting a vulnerability"
+title: "Security"
 description: "How to report a security issue to Scenery."
 sidebar:
   order: 5
