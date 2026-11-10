@@ -16,7 +16,7 @@ Check that this device is set up correctly.
 ### `scenery doctor`
 
 ```text
-Print health status: daemon reachability, state directory, versions
+Print health status: daemon reachability, local data, versions
 
 Usage: scenery doctor [OPTIONS]
 
@@ -127,7 +127,7 @@ Usage: scenery mcp setup [OPTIONS]
 Options:
       --client <CLIENT>   Target AI client (currently only "claude-code" is supported)
       --dry-run           Print the config entry that would be written without modifying any files
-      --rotate-local-key  Generate a new local key and rewrite the Claude Code entry with it. Without this flag an existing key is kept across re-runs
+      --rotate-local-key  Issue a new local connection key; reconnect your AI client afterwards. Without this flag your existing key is kept
   -h, --help              Print help
 ```
 
@@ -252,7 +252,7 @@ Update an installed skill to the latest registry version.
 
 With <id>: check the registry for the latest version of that skill and install it if newer than what is currently installed.
 
-With --all: do the same for every skill in the state DB with status 'active'.
+With --all: do the same for every installed skill.
 
 With neither: print usage.
 

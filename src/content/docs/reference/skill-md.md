@@ -9,13 +9,13 @@ A skill is a folder with a `SKILL.md` file at its root. The file starts with a Y
 
 ## Top-level keys
 
-Only three keys are allowed at the top level.
+Only `name`, `description`, `license` and `metadata` are allowed at the top level.
 
 | Key | Type | Required | Notes |
 | --- | --- | --- | --- |
 | `name` | string | yes | Unique skill name. Lowercase letters, digits and hyphens, starting and ending with a letter or digit. Up to 64 characters. |
 | `description` | string | yes | What the skill does, shown in the catalog and to your AI client. 10 to 280 characters. |
-| `license` | string | no | An SPDX license identifier such as `Apache-2.0` or `MIT`. |
+| `license` | string | no | An SPDX license identifier such as `Apache-2.0` or `MIT`. Defaults to `Apache-2.0` if omitted. |
 
 Everything specific to Scenery goes under `metadata.scenery`.
 

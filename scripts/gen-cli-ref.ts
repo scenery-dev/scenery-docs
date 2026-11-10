@@ -6,7 +6,10 @@
  * Regenerate snapshot:   npx tsx scripts/gen-cli-ref.ts --snapshot /path/to/scenery
  *   (point it at a downloaded release binary, e.g. from
  *    `gh release download vX.Y.Z --repo scenery-dev/scenery`; it only runs
- *    `--help` and `-V`, never any other command.) Review the diff, then re-render.
+ *    `--help` and `-V`, never any other command.) This captures RAW help text.
+ *   Then edit scripts/cli-help.snapshot.json BY HAND for public wording (no
+ *   internal names, paths or mechanisms); the snapshot is hand-curated and
+ *   the test runs the content guard over the rendered page. Then re-render.
  *
  * Only commands in INCLUDE are documented. Daemon foreground runs, the MCP
  * relay shim, and debug/internal commands are deliberately left out.
@@ -60,39 +63,6 @@ export const INCLUDE: Group[] = [
   { title: "Removal", blurb: "Remove Scenery from this device.", commands: ["uninstall"] },
 ];
 
-/** Wording that does not belong on the public site, replaced in the snapshot. */
-const REDACTIONS: [string | RegExp, string][] = [
-  [" (REDACTED)", ""],
-  [' is supported in REDACTED)', " is supported)"],
-  [
-    /REDACTED[^\n]*?(?=\n  -h|\n\n|$)/s,
-    "Generate a new local key and rewrite the Claude Code entry with it. Without this flag an existing key is kept across re-runs",
-  ],
-  ["~/.claude/skills/", "the Claude Code skills directory"],
-  [" (unattended path for REDACTED rollouts, used without prompting)", " (used without prompting)"],
-  [
-    "Removes the skill's versioned install directory, the active/ symlink, and the installed_skills / skill_versions DB rows.  Execution counts and ratings are preserved for historical audit purposes.",
-    "Removes the skill's local install and records.",
-  ],
-  [
-    "If the skill was installed via a managed backend desired-state record, the backend installation is also deactivated so the reconciler will not reinstall it on the next sync.",
-    "If your organization installed the skill for you, it is also deactivated so it is not reinstalled on the next sync.",
-  ],
-  [" (used to deactivate managed installs)", ""],
-  [
-    "Removes the plugin from the local Claude Code marketplace (marketplace source dir, install cache, installed_plugins.json, settings.json enabledPlugins entry) and deactivates the backend installation so the reconciler does not reinstall it on the next sync.",
-    "Removes the plugin from this device and stops it from being reinstalled on the next sync.",
-  ],
-  ["Also delete the Scenery data directory and keychain token", "Also delete Scenery's local data and saved sign-in"],
-  ["Registry URL for the backend device-deprovision call", "Registry URL used to deregister this device"],
-];
-
-export function redact(text: string): string {
-  let out = text;
-  for (const [from, to] of REDACTIONS) out = out.replace(from, to);
-  return out.replace(/[ \t]+$/gm, "").trimEnd();
-}
-
 export interface Snapshot {
   version: string;
   commands: Record<string, string>;
@@ -103,7 +73,7 @@ export function captureSnapshot(binary: string): Snapshot {
     execFileSync(binary, args, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
   const version = run(["-V"]).trim().replace(/^scenery\s+/, "");
   const commands: Record<string, string> = {};
-  for (const g of INCLUDE) for (const c of g.commands) commands[c] = redact(run([...c.split(" "), "--help"]));
+  for (const g of INCLUDE) for (const c of g.commands) commands[c] = run([...c.split(" "), "--help"]).replace(/[ \t]+$/gm, "").trimEnd();
   return { version, commands };
 }
 
@@ -132,9 +102,12 @@ export function renderCli(snap: Snapshot): string {
   return parts.join("\n").trimEnd() + "\n";
 }
 
+export function loadSnapshot(): Snapshot {
+  return JSON.parse(readFileSync(SNAPSHOT_PATH, "utf8")) as Snapshot;
+}
+
 export function generate(): void {
-  const snap = JSON.parse(readFileSync(SNAPSHOT_PATH, "utf8")) as Snapshot;
-  writeFileSync(OUT_PATH, renderCli(snap));
+  writeFileSync(OUT_PATH, renderCli(loadSnapshot()));
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
