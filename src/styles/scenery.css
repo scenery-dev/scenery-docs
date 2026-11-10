@@ -1,0 +1,121 @@
+/* Scenery theme: portal tokens (scenery-backend frontend main.css) mapped to Starlight. */
+@font-face {
+	font-family: 'Inter';
+	src: url('/fonts/inter-latin.woff2') format('woff2');
+	font-weight: 100 900;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'JetBrains Mono';
+	src: url('/fonts/jetbrains-mono-latin.woff2') format('woff2');
+	font-weight: 100 800;
+	font-display: swap;
+}
+
+:root {
+	--sl-font: 'Inter', ui-sans-serif, system-ui, sans-serif;
+	--sl-font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+	--scn-radius-sm: 4px;
+	--scn-radius-md: 6px;
+	--scn-radius-lg: 8px;
+}
+
+/* Dark (default): portal dark tokens. */
+:root,
+:root[data-theme='dark'] {
+	--sl-color-black: #000000;
+	--sl-color-gray-6: #0a0a0a; /* sidebar-bg */
+	--sl-color-gray-5: #222222; /* border */
+	--sl-color-gray-4: #777777; /* text-faint */
+	--sl-color-gray-3: #aaaaaa; /* text-muted */
+	--sl-color-gray-2: #d4d4d4;
+	--sl-color-gray-1: #eeeeee;
+	--sl-color-white: #fafafa; /* text */
+	--sl-color-bg: #000000;
+	--sl-color-bg-nav: #0a0a0a;
+	--sl-color-bg-sidebar: #0a0a0a;
+	--sl-color-bg-inline-code: #111111; /* card-bg */
+	--sl-color-hairline: #222222;
+	--sl-color-hairline-light: #222222;
+	--sl-color-hairline-shade: #222222;
+	--sl-color-accent-low: rgba(0, 112, 243, 0.12);
+	--sl-color-accent: #0070f3;
+	--sl-color-accent-high: #6cb2ff;
+	--sl-color-text-accent: #6cb2ff;
+	--sl-color-green-low: rgba(80, 227, 194, 0.12);
+	--sl-color-green: #50e3c2;
+	--sl-color-green-high: #50e3c2;
+	--sl-color-orange-low: rgba(245, 166, 35, 0.12);
+	--sl-color-orange: #f5a623;
+	--sl-color-orange-high: #f5a623;
+	--sl-color-red-low: rgba(255, 68, 68, 0.12);
+	--sl-color-red: #ff4444;
+	--sl-color-red-high: #ff7a7a;
+	--sl-color-purple-low: rgba(167, 139, 250, 0.12);
+	--sl-color-purple: #a78bfa;
+	--sl-color-purple-high: #c4b5fd;
+}
+
+/* Light: portal light tokens. */
+:root[data-theme='light'] {
+	--sl-color-white: #0f172a; /* text */
+	--sl-color-gray-1: #1e293b;
+	--sl-color-gray-2: #334155;
+	--sl-color-gray-3: #475569; /* text-muted */
+	--sl-color-gray-4: #64748b;
+	--sl-color-gray-5: #e5e7eb; /* border */
+	--sl-color-gray-6: #fafafa; /* sidebar-bg */
+	--sl-color-gray-7: #f8fafc;
+	--sl-color-black: #ffffff;
+	--sl-color-bg: #ffffff;
+	--sl-color-bg-nav: #ffffff;
+	--sl-color-bg-sidebar: #fafafa;
+	--sl-color-bg-inline-code: #f1f5f9;
+	--sl-color-hairline: #e5e7eb;
+	--sl-color-hairline-light: #e5e7eb;
+	--sl-color-hairline-shade: #e5e7eb;
+	--sl-color-accent-low: rgba(37, 99, 235, 0.08);
+	--sl-color-accent: #2563eb;
+	--sl-color-accent-high: #1d4ed8;
+	--sl-color-text-accent: #2563eb;
+	--sl-color-green-low: rgba(5, 150, 105, 0.1);
+	--sl-color-green: #059669;
+	--sl-color-green-high: #047857;
+	--sl-color-orange-low: rgba(217, 119, 6, 0.1);
+	--sl-color-orange: #d97706;
+	--sl-color-orange-high: #b45309;
+	--sl-color-red-low: rgba(220, 38, 38, 0.1);
+	--sl-color-red: #dc2626;
+	--sl-color-red-high: #b91c1c;
+	--sl-color-purple-low: rgba(124, 58, 237, 0.1);
+	--sl-color-purple: #7c3aed;
+	--sl-color-purple-high: #6d28d9;
+}
+
+/* Neobrutalist-leaning structure: tight radii, crisp borders. */
+.sl-markdown-content :not(a, strong, em, del, span, input, code, br) + :not(a, strong, em, del, span, input, code, br, :where(.not-content *)) {
+	margin-top: 1.25rem;
+}
+pre,
+.expressive-code .frame,
+.sl-markdown-content table,
+.sl-link-button,
+starlight-tabs,
+.starlight-aside {
+	border-radius: var(--scn-radius-md);
+}
+code {
+	border-radius: var(--scn-radius-sm);
+}
+.sl-link-button {
+	font-weight: 600;
+}
+.main-site-link {
+	color: var(--sl-color-gray-3);
+	font-size: var(--sl-text-sm);
+	text-decoration: none;
+	margin-inline-end: 0.5rem;
+}
+.main-site-link:hover {
+	color: var(--sl-color-white);
+}
