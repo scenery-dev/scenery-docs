@@ -9,18 +9,18 @@ This walks you through the shortest path from a new Scenery organization to an e
 
 ## 1. Sign in to the portal (2 minutes)
 
-Go to [app.scenery.dev](https://app.scenery.dev) and sign in with your admin account. Scenery is invite-only, so you receive your admin invite by email.
+Go to [app.scenery.dev/admin/login](https://app.scenery.dev/admin/login) and sign in with your admin account. Scenery is invite-only, so you receive your admin invite by email.
 
 ## 2. Invite an employee (3 minutes)
 
 1. In the admin portal, open **Invites** under Configure.
-2. Enter the employee's email address, leave the role as **member**, and choose **Send invite**.
+2. Enter the employee's email address. In the menu next to it, choose **Join org:** followed by your organization's name. A **Role** menu appears; leave it as **member**. Choose **Send invite**.
 
 The employee gets an email with a link to set up their account. Details are in [Invite users](/rollout/invite-users/).
 
 ## 3. Employee installs the runner and pairs (10 minutes)
 
-The employee signs in to the portal and follows the setup screen. It shows the install commands and a pairing code.
+The employee signs in to the portal, chooses **Pair a device** on the home page (or opens **My Devices**), and expands **Add a new device**. The panel shows the install commands and a pairing command.
 
 On macOS:
 

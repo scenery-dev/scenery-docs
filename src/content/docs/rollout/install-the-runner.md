@@ -54,7 +54,7 @@ You do not need to install it on your own admin machine. The admin portal runs i
 
 2. If the script reports it cannot verify the release, install a signature checker as the message suggests, or use Homebrew instead. Do not skip verification.
 
-3. If the script asks for a pairing code, continue with [Pair devices](/rollout/pair-devices/). You can also press Enter and pair later.
+3. If the script asks for a pairing code, continue with [Pair devices](/rollout/pair-devices/). To pair later instead, press Enter at each prompt until the script moves on. It then logs that pairing failed. Ignore that message: the install still completes, and you can pair afterwards.
 
 4. Open a new terminal and run `scenery doctor`.
 
@@ -64,7 +64,7 @@ The script also works on macOS. Homebrew is the preferred path there because it 
 
 ## Upgrade
 
-On Homebrew, run `brew upgrade scenery`. On the install script path, run the script again. Keep runners on a current release. A device on an old runner may show **Waiting on device (runner update needed)** for new installs until it is upgraded.
+On Homebrew, run `brew upgrade scenery`. On the install script path, run the script again. Keep runners on a current release. A device on an old runner may show **Waiting on device (runner update needed)** in the admin portal for new installs until it is upgraded.
 
 ## What the employee sees
 

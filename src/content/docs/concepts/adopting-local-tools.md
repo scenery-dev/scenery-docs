@@ -24,7 +24,7 @@ A tool that exists only on one laptop is not governed and cannot be shared or re
 
 ## What an employee sees
 
-On **Local Discoveries** in the portal, each found tool has an **Adopt as installed** button. Imported tools are listed under **Imported** for each tool type, as either found on their devices or imported as private.
+On **Local Discoveries** in the portal, each found tool has an **Adopt as installed** button. Imported tools are listed under **Imported** for MCP servers and plugins, as either found on their devices or imported as private. Skills appear under **My Skills**.
 
 ## Related
 

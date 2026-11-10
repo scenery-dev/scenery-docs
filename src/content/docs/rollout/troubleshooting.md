@@ -16,7 +16,7 @@ Ask them to check spam and search for mail from `noreply@scenery.dev`. If it is 
 Invite links work for 7 days and only once. Send a new invite from **Invites**.
 
 **The new account asks for an organization name.**
-The invite was sent with **New org** selected instead of **Join org**. Revoke it, then send it again with **Join org: your organization name** chosen and the right role. See [Invite users](/rollout/invite-users/).
+The invite was sent with the wrong option in the menu. Revoke it and send it again with **Join org:** *your organization* selected. See [Invite users](/rollout/invite-users/).
 
 **A person cannot sign in.**
 Open **Users** and check their status. If it says **Revoked**, choose **Restore**. If it says **Active**, ask them to use **Forgot password?** on the sign-in page. The **Users** page also shows failed sign-ins for the last 30 days.
@@ -70,7 +70,7 @@ Revoking a device is permanent. The employee runs `scenery auth pair` with a new
 Restart Claude Code. If it still does not appear, run `scenery mcp setup` and restart again.
 
 **The employee sees "Connection expired" on an MCP server.**
-Their sign-in to that service has lapsed. They choose **Connect** on the server's page in the portal and sign in again.
+Their sign-in to that service has lapsed. They choose **Reconnect** on the server's page in the portal (the button reads **Re-authorize** in some other cases) and sign in again.
 
 **A server cannot be approved.**
 Some servers need a working connection before approval. The portal says so on the server's page. Finish setting up its connection under the **Credentials** tab, then try again.

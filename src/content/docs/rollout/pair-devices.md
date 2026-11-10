@@ -17,7 +17,7 @@ The employee has an account and has [installed the runner](/rollout/install-the-
 
    Expected: the portal home page opens. If the person has no device yet, a **Pair a device** button is shown.
 
-2. Choose **Pair a device**, or open **My Devices** and expand **Add a new device**.
+2. Choose **Pair a device** (or open **My Devices**), then expand **Add a new device**.
 
    Expected: a panel titled **Install the Scenery agent** shows the install commands and a pairing command that looks like `scenery auth pair <code>`, with a countdown. The panel says **Waiting for agent to connect**.
 

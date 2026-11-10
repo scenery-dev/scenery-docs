@@ -19,9 +19,9 @@ Scenery is invite-only. Nobody joins your organization unless an admin invites t
 
 3. Enter the employee's work email address.
 
-4. In the target menu, choose **Join org: your organization name**. Do not leave it on **New org**, which sends an invitation to start a separate organization.
+4. In the menu next to the email, choose **Join org:** followed by your organization's name.
 
-   Expected: a **Role** menu appears next to it.
+   Expected: the button reads **Send invite** and a **Role** menu appears. If the button reads anything else, the wrong option is selected.
 
 5. Choose **member** for employees, or **admin** for people who will manage Scenery.
 

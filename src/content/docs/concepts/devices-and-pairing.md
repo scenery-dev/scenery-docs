@@ -16,7 +16,7 @@ Pairing is how Scenery knows a device belongs to a real, signed-in person. A dev
 ## How it works
 
 1. The employee installs the runner.
-2. In the portal, they get a pairing code. The portal shows it on the setup screen, or under **My Devices** with **Pair a device**.
+2. In the portal, they get a pairing code. The portal shows it under **My Devices** > **Add a new device** (the home page's **Pair a device** button takes them there).
 3. They run `scenery auth pair <code>`.
 
 A new computer can also join with `scenery auth login`, which signs in through the browser.

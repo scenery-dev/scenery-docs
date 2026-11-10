@@ -55,7 +55,7 @@ The **Policies** tab on a server's page sets the overall posture for that server
 
 1. Open the **Policies** tab.
 
-   Expected: either the current policy, or a note that no policy is configured and all tools pass through.
+   Expected: either the current policy, or a note that no policy is configured and all tools pass through. If the tab says the server has no connection set up yet, set it up on the **Credentials** tab first.
 
 2. Create a policy and pick its type: **Allow All**, **Role-Based** or **Deny All**.
 

@@ -13,7 +13,7 @@ Admins are the IT and security people who roll Scenery out. They work in the por
 
 - Invite employees and manage [users and roles](/concepts/users-and-orgs/).
 - Review and approve tools in the **Review Queue**, **MCP Servers** and **Plugins** pages.
-- Watch devices, the **Activity Log** and findings.
+- Watch devices, the **Activity Log** and **Shadow AI** discoveries.
 - Revoke tools, devices and users when they need to.
 
 Start with the [Quickstart](/overview/quickstart/), then the [Rollout guide](/rollout/install-the-runner/).
